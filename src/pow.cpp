@@ -33,7 +33,7 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHead
     }
 
     if (pindexLast->nHeight > Params().LAST_POW_BLOCK()) {
-        uint256 bnTargetLimit = (~uint256(0) >> 20);
+        uint256 bnTargetLimit = (~uint256(0) >> 4);
 		
         int64_t nTargetSpacing = Params().TargetSpacing();
         int64_t nTargetTimespan = Params().TargetTimespan()*40;
@@ -103,7 +103,7 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHead
 	
 	
 	// Set the Diff Down for POS LimxDev 02-07-2017
-	if (pindexLast->nHeight <= Params().LAST_POW_BLOCK()) bnNew = Params().ProofOfWorkLimit();
+	if (pindexLast->nHeight <= Params().LAST_POW_BLOCK()) bnNew = Params().ProofOfWorkLimit()/2;
 	
     if (bnNew > Params().ProofOfWorkLimit()) {
         bnNew = Params().ProofOfWorkLimit();

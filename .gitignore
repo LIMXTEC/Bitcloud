@@ -1,47 +1,123 @@
-# Windows image file caches
-Thumbs.db
-ehthumbs.db
+.gitignore
+*.sublime-project
+*.sublime-workspace
+todo.txt
+reset-files.bash
 
-# Folder config file
-Desktop.ini
+*.tar.gz
 
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
+*.exe
+src/bitcloud
+src/bitcloudd
+src/bitcloud-cli
+src/bitcloud-tx
+src/test/test_bitcloud
+src/qt/test/test_bitcloud-qt
 
-# Windows Installer files
-*.cab
-*.msi
-*.msm
-*.msp
+# autoreconf
+Makefile.in
+aclocal.m4
+autom4te.cache/
+build-aux/config.guess
+build-aux/config.sub
+build-aux/depcomp
+build-aux/install-sh
+build-aux/ltmain.sh
+build-aux/m4/libtool.m4
+build-aux/m4/lt~obsolete.m4
+build-aux/m4/ltoptions.m4
+build-aux/m4/ltsugar.m4
+build-aux/m4/ltversion.m4
+build-aux/missing
+build-aux/compile
+build-aux/test-driver
+config.log
+config.status
+configure
+libtool
+src/config/bitcloud-config.h
+src/config/bitcloud-config.h.in
+src/config/stamp-h1
+share/setup.nsi
+share/qt/Info.plist
+contrib/devtools/split-debug.sh
 
-# Windows shortcuts
-*.lnk
+src/univalue/gen
 
-# =========================
-# Operating System Files
-# =========================
+src/qt/*.moc
+src/qt/moc_*.cpp
+src/qt/forms/ui_*.h
 
-# OSX
-# =========================
+src/qt/test/moc*.cpp
 
+.deps
+.dirstamp
+.libs
+.*.swp
+*.*~*
+*.bak
+*.rej
+*.orig
+*.pyc
+*.o
+*.o-*
+*.patch
+.bitcloud
+*.a
+*.pb.cc
+*.pb.h
+
+*.log
+*.trs
+*.dmg
+
+*.json.h
+*.raw.h
+
+#libtool object files
+*.lo
+*.la
+
+# Compilation and Qt preprocessor part
+*.qm
+Makefile
+bitcloud-qt
+BTDX-Qt.app
+
+# Unit-tests
+Makefile.test
+bitcloud-qt_test
+src/test/buildenv.py
+
+# Resources cpp
+qrc_*.cpp
+
+# Qt creator
+*.pro.user
+
+# Mac specific
 .DS_Store
-.AppleDouble
-.LSOverride
+build
 
-# Thumbnails
-._*
+#lcov
+*.gcno
+/*.info
+test_bitcloud.coverage/
+total.coverage/
+coverage_percent.txt
 
-# Files that might appear in the root of a volume
-.DocumentRevisions-V100
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-.VolumeIcon.icns
+#build tests
+linux-coverage-build
+linux-build
+win32-build
+qa/pull-tester/run-bitcoind-for-test.sh
+qa/pull-tester/tests-config.sh
+qa/pull-tester/cache/*
+qa/pull-tester/test.*/*
 
-# Directories potentially created on remote AFP share
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
+!src/leveldb*/Makefile
+
+.cproject
+.project
+/doc/doxygen/
+/nbproject/

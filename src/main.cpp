@@ -68,7 +68,7 @@ bool fCheckBlockIndex = false;
 unsigned int nCoinCacheSize = 5000;
 bool fAlerts = DEFAULT_ALERTS;
 
-unsigned int nStakeMinAge = 6 * 60 * 60;
+unsigned int nStakeMinAge = 60 * 60;
 int64_t nReserveBalance = 0;
 
 /** Fees smaller than this (in duffs) are considered zero fee (for relaying and mining)
@@ -1638,7 +1638,7 @@ int64_t GetBlockValue(int nHeight)
 	int nSubsidyHalvingInterval = 78840; // 3/4 Year
 	int halvings = nHeight / nSubsidyHalvingInterval;
 	
-	if( nHeight == 0 ) return 11300000 * COIN;
+	if( nHeight == 0 ) return 11278450 * COIN;
 	if( nHeight <= 2016 ) return nSubsidy / 10000 ;
 	
 	if (halvings >= 10) return nSubsidy / 50; // 3 BTDX
