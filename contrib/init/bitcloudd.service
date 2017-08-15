@@ -1,0 +1,26 @@
+[Unit]
+Description=BTDX's distributed currency daemon
+After=network.target
+
+[Service]
+User=bitcloud
+Group=bitcloud
+
+Type=forking
+PIDFile=/var/lib/bitcloudd/bitcloudd.pid
+
+ExecStart=/usr/bin/bitcloudd -daemon -pid=/var/lib/bitcloudd/bitcloudd.pid \
+          -conf=/etc/bitcloud/bitcloud.conf -datadir=/var/lib/bitcloudd
+
+ExecStop=-/usr/bin/bitcloud-cli -conf=/etc/bitcloud/bitcloud.conf \
+         -datadir=/var/lib/bitcloudd stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

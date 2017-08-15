@@ -1,0 +1,20 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="bg">locale/bitcloud_bg.qm</file>
+        <file alias="de">locale/bitcloud_de.qm</file>
+        <file alias="en">locale/bitcloud_en.qm</file>
+        <file alias="es">locale/bitcloud_es.qm</file>
+        <file alias="fi">locale/bitcloud_fi.qm</file>
+        <file alias="fr">locale/bitcloud_fr.qm</file>
+        <file alias="it">locale/bitcloud_it.qm</file>
+        <file alias="ja">locale/bitcloud_ja.qm</file>
+        <file alias="pl">locale/bitcloud_pl.qm</file>
+        <file alias="pt">locale/bitcloud_pt.qm</file>
+        <file alias="ru">locale/bitcloud_ru.qm</file>
+        <file alias="sk">locale/bitcloud_sk.qm</file>
+        <file alias="sv">locale/bitcloud_sv.qm</file>
+        <file alias="vi">locale/bitcloud_vi.qm</file>
+        <file alias="zh_CN">locale/bitcloud_zh_CN.qm</file>
+        <file alias="zh_TW">locale/bitcloud_zh_TW.qm</file>
+    </qresource>
+</RCC>

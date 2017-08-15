@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Diamond
+Comment=Diamond P2P Cryptocurrency
+Comment[fr]=Diamond, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Diamond, eşten eşe kriptografik sanal para birimi
+Exec=bitcloud-qt %u
+Terminal=false
+Type=Application
+Icon=bitcloud128
+MimeType=x-scheme-handler/bitcloud;
+Categories=Office;Finance;
