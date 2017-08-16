@@ -5,7 +5,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 //
 #include "coinmix.h"
-#include "ui_Coinmix.h"
+#include "ui_coinmix.h"
 
 #include "bitcoinunits.h"
 #include "clientmodel.h"
