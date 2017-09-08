@@ -3330,8 +3330,8 @@ void CWallet::AutoCombineDust()
     for (map<CBitcoinAddress, vector<COutput> >::iterator it = mapCoinsByAddress.begin(); it != mapCoinsByAddress.end(); it++) {
         vector<COutput> vCoins, vRewardCoins;
         vCoins = it->second;
-
-		MilliSleep(nAutoCombineThresholdTime*60000);
+          
+       //MilliSleep(nAutoCombineThresholdTime*60000);
 
         //find masternode rewards that need to be combined
         CCoinControl* coinControl = new CCoinControl();
