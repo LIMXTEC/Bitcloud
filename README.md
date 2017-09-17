@@ -1,3 +1,7 @@
+Copyright (C) 2009 -until todayThe Bitcoin Core Developers
+Copyright (C) 2015 -until today The Dash and PIVX Core Developers
+Copyright (C) 2017 -until todayThe BTDX Core Developers
+
 BTDX Core integration/staging repository
 =====================================
 
