@@ -449,6 +449,19 @@ void CNode::CloseSocketDisconnect()
         vRecvMsg.clear();
 }
 
+bool CNode::DisconnectOldProtocol(int nVersionRequired, string strLastCommand)
+{
+    fDisconnect = false;
+    if (nVersion < nVersionRequired) {
+        LogPrintf("%s : peer=%d using obsolete version %i; disconnecting\n", __func__, id, nVersion);
+        PushMessage("reject", strLastCommand, REJECT_OBSOLETE, strprintf("Version must be %d or greater", ActiveProtocol()));
+        fDisconnect = true;
+    }
+
+    return fDisconnect;
+}
+
+
 void CNode::PushVersion()
 {
     int nBestHeight = g_signals.GetHeight().get_value_or(0);
@@ -1717,9 +1730,11 @@ void RelayTransactionLockReq(const CTransaction& tx, bool relayToAll)
 void RelayInv(CInv& inv)
 {
     LOCK(cs_vNodes);
-    BOOST_FOREACH (CNode* pnode, vNodes)
+    BOOST_FOREACH (CNode* pnode, vNodes){
+    		if((pnode->nServices==NODE_BLOOM_WITHOUT_MN) && inv.IsMasterNodeType())continue;
         if (pnode->nVersion >= ActiveProtocol())
             pnode->PushInventory(inv);
+    }
 }
 
 void CNode::RecordBytesRecv(uint64_t bytes)

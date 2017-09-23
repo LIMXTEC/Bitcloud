@@ -964,6 +964,11 @@ bool GetCoinAge(const CTransaction& tx, const unsigned int nTxTime, uint64_t& nC
     return true;
 }
 
+bool MoneyRange(CAmount nValueOut)
+{
+    return nValueOut >= 0 && nValueOut <= Params().MaxMoneyOut();
+}
+
 bool CheckTransaction(const CTransaction& tx, CValidationState& state)
 {
     // Basic checks that don't depend on any context
@@ -987,7 +992,7 @@ bool CheckTransaction(const CTransaction& tx, CValidationState& state)
         if (txout.nValue < 0)
             return state.DoS(100, error("CheckTransaction() : txout.nValue negative"),
                 REJECT_INVALID, "bad-txns-vout-negative");
-        if (txout.nValue > MAX_MONEY)
+        if (txout.nValue > Params().MaxMoneyOut())
             return state.DoS(100, error("CheckTransaction() : txout.nValue too high"),
                 REJECT_INVALID, "bad-txns-vout-toolarge");
         nValueOut += txout.nValue;
@@ -1074,7 +1079,7 @@ CAmount GetMinRelayFee(const CTransaction& tx, unsigned int nBytes, bool fAllowF
     }
 
     if (!MoneyRange(nMinFee))
-        nMinFee = MAX_MONEY;
+        nMinFee = Params().MaxMoneyOut();
     return nMinFee;
 }
 
@@ -2141,8 +2146,8 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
     std::vector<std::pair<uint256, CDiskTxPos> > vPos;
     vPos.reserve(block.vtx.size());
     blockundo.vtxundo.reserve(block.vtx.size() - 1);
-    int64_t nValueOut = 0;
-    int64_t nValueIn = 0;
+    CAmount nValueOut = 0;
+    CAmount nValueIn = 0;
     for (unsigned int i = 0; i < block.vtx.size(); i++) {
         const CTransaction& tx = block.vtx[i];
 
@@ -2152,7 +2157,12 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
             return state.DoS(100, error("ConnectBlock() : too many sigops"),
                 REJECT_INVALID, "bad-blk-sigops");
 
-        if (!tx.IsCoinBase()) {
+        if (tx.IsCoinBase())
+        {
+            nValueOut += tx.GetValueOut();
+        }
+        else
+        {
             if (!view.HaveInputs(tx))
                 return state.DoS(100, error("ConnectBlock() : inputs missing/spent"),
                     REJECT_INVALID, "bad-txns-inputs-missingorspent");
@@ -2167,15 +2177,19 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
                         REJECT_INVALID, "bad-blk-sigops");
             }
 
-            nFees += view.GetValueIn(tx) - tx.GetValueOut();
-            nValueIn += view.GetValueIn(tx);
+
+            CAmount nTxValueIn = view.GetValueIn(tx);
+            CAmount nTxValueOut = tx.GetValueOut();
+            nValueIn += nTxValueIn;
+            nValueOut += nTxValueOut;
+            if (!tx.IsCoinStake())
+                nFees += nTxValueIn - nTxValueOut;
 
             std::vector<CScriptCheck> vChecks;
             if (!CheckInputs(tx, state, view, fScriptChecks, flags, false, nScriptCheckThreads ? &vChecks : NULL))
                 return false;
             control.Add(vChecks);
         }
-        nValueOut += tx.GetValueOut();
 
         CTxUndo undoDummy;
         if (i > 0) {
@@ -2187,9 +2201,17 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
         pos.nTxOffset += ::GetSerializeSize(tx, SER_DISK, CLIENT_VERSION);
     }
 
-    // ppcoin: track money supply and mint amount info
+    CAmount nMoneySupplyPrev = pindex->pprev ? pindex->pprev->nMoneySupply : 0;
     pindex->nMint = nValueOut - nValueIn + nFees;
-    pindex->nMoneySupply = (pindex->pprev ? pindex->pprev->nMoneySupply : 0) + nValueOut - nValueIn;
+    pindex->nMoneySupply = nMoneySupplyPrev + nValueOut - nValueIn;
+
+    CAmount nExpectedMint = GetBlockValue(pindex->pprev->nHeight);
+    if (pindex->pprev->nHeight > 4200 && !IsBlockValueValid(block, nExpectedMint, pindex->nMint)) {
+        return state.DoS(100,
+            error("ConnectBlock() : reward pays too much (actual=%s vs limit=%s)",
+                FormatMoney(pindex->nMint), FormatMoney(nExpectedMint)),
+            REJECT_INVALID, "bad-cb-amount");
+    }
 
     if (!pblocktree->WriteBlockIndex(CDiskBlockIndex(pindex)))
         return error("Connect() : WriteBlockIndex for pindex failed");
@@ -2197,13 +2219,6 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
     int64_t nTime1 = GetTimeMicros();
     nTimeConnect += nTime1 - nTimeStart;
     LogPrint("bench", "      - Connect %u transactions: %.2fms (%.3fms/tx, %.3fms/txin) [%.2fs]\n", (unsigned)block.vtx.size(), 0.001 * (nTime1 - nTimeStart), 0.001 * (nTime1 - nTimeStart) / block.vtx.size(), nInputs <= 1 ? 0 : 0.001 * (nTime1 - nTimeStart) / (nInputs - 1), nTimeConnect * 0.000001);
-
-    if (!IsInitialBlockDownload() && !IsBlockValueValid(block, GetBlockValue(pindex->pprev->nHeight))) {
-        return state.DoS(100,
-            error("ConnectBlock() : reward pays too much (actual=%d vs limit=%d)",
-                block.vtx[0].GetValueOut(), GetBlockValue(pindex->pprev->nHeight)),
-            REJECT_INVALID, "bad-cb-amount");
-    }
 
     if (!control.Wait())
         return state.DoS(100, false);
@@ -4590,14 +4605,8 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
         CAddress addrFrom;
         uint64_t nNonce = 1;
         vRecv >> pfrom->nVersion >> pfrom->nServices >> nTime >> addrMe;
-        if (pfrom->nVersion < ActiveProtocol()) {
-            // disconnect from peers older than this proto version
-            LogPrintf("peer=%d using obsolete version %i; disconnecting\n", pfrom->id, pfrom->nVersion);
-            pfrom->PushMessage("reject", strCommand, REJECT_OBSOLETE,
-                strprintf("Version must be %d or greater", ActiveProtocol()));
-            pfrom->fDisconnect = true;
+        if (pfrom->DisconnectOldProtocol(ActiveProtocol(), strCommand))
             return false;
-        }
 
         if (pfrom->nVersion == 10300)
             pfrom->nVersion = 300;
@@ -5094,6 +5103,9 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
                     std::string strError = "invalid header received " + header.GetHash().ToString();
                     return error(strError.c_str());
                 }
+
+                //disconnect this node if its old protocol version
+                pfrom->DisconnectOldProtocol(ActiveProtocol(), strCommand);
             }
         }
 
@@ -5143,6 +5155,9 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
                     TRY_LOCK(cs_main, lockMain);
                     if (lockMain) Misbehaving(pfrom->GetId(), nDoS);
                 }
+
+                //disconnect this node if its old protocol version
+                pfrom->DisconnectOldProtocol(ActiveProtocol(), strCommand);
             }
         }
 
@@ -5376,12 +5391,30 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
     return true;
 }
 
+// Note: whenever a protocol update is needed toggle between both implementations (comment out the formerly active one)
+//       so we can leave the existing clients untouched (old SPORK will stay on so they don't see even older clients). 
+//       Those old clients won't react to the changes of the other (new) SPORK because at the time of their implementation
+//       it was the one which was commented out
 int ActiveProtocol()
 {
+
+    // SPORK_14 was used for 70710. Leave it 'ON' so they don't see < 70710 nodes. They won't react to SPORK_15
+    // messages because it's not in their code
+/*
     if (IsSporkActive(SPORK_14_NEW_PROTOCOL_ENFORCEMENT)) {
         if (chainActive.Tip()->nHeight >= Params().ModifierUpgradeBlock())
             return MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT;
     }
+
+    return MIN_PEER_PROTO_VERSION_BEFORE_ENFORCEMENT;
+*/
+
+
+    // SPORK_15 is used for 70910. Nodes < 70910 don't see it and still get their protocol version via SPORK_14 and their 
+    // own ModifierUpgradeBlock()
+ 
+    if (IsSporkActive(SPORK_15_NEW_PROTOCOL_ENFORCEMENT_2))
+            return MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT;
 
     return MIN_PEER_PROTO_VERSION_BEFORE_ENFORCEMENT;
 }

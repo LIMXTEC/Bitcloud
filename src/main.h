@@ -103,6 +103,9 @@ static const unsigned int DATABASE_WRITE_INTERVAL = 3600;
 /** Maximum length of reject messages. */
 static const unsigned int MAX_REJECT_MESSAGE_LENGTH = 111;
 
+/** Enable bloom filter */
+ static const bool DEFAULT_PEERBLOOMFILTERS = true;
+
 /** "reject" message codes */
 static const unsigned char REJECT_MALFORMED = 0x01;
 static const unsigned char REJECT_INVALID = 0x10;
@@ -293,6 +296,7 @@ struct CDiskTxPos : public CDiskBlockPos {
 
 
 CAmount GetMinRelayFee(const CTransaction& tx, unsigned int nBytes, bool fAllowFree);
+bool MoneyRange(CAmount nValueOut);
 
 /**
  * Check transaction inputs, and make sure any

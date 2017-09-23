@@ -1,7 +1,7 @@
 // Copyright (c) 2010 Satoshi Nakamoto
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
-// Copyright (c) 2015-2017 The PIVX developers 
+// Copyright (c) 2015-2017 The PIVX developers
 // Copyright (c) 2015-2017 The BTDX developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
@@ -61,7 +61,7 @@ static Checkpoints::MapCheckpoints mapCheckpoints =
 */
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of(0, uint256("0x001"));
-	
+
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
     1493667067, // * UNIX timestamp of last checkpoint block
@@ -118,6 +118,7 @@ public:
         nMasternodeCountDrift = 20;
 		nMasternodeColleteralLimxDev = 10000; //Params().MasternodeColleteralLimxDev()
         nModifierUpdateBlock = 1; // we use the version 2 for dmd
+        nMaxMoneyOut = 21000000 * COIN;
 /*
 		printf("Searching for genesis block...\n");
         assert(hashGenesisBlock == uint256("0x00008412c3a4bbf7133c9cfbb8f9041fdd39bc98d1e1527612d10d95ed9b06d1"));
@@ -144,10 +145,10 @@ while (true)
 printf("genesis.nTime = %u \n", genesis.nTime);
 printf("genesis.nNonce = %u \n", genesis.nNonce);
 printf("genesis.nVersion = %u \n", genesis.nVersion);
-printf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str()); 
-printf("genesis.hashMerkleRoot = %s \n", genesis.hashMerkleRoot.ToString().c_str()); 
+printf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str());
+printf("genesis.hashMerkleRoot = %s \n", genesis.hashMerkleRoot.ToString().c_str());
 */
-                       
+
         /**
          * Build the genesis block. Note that the output of the genesis coinbase cannot
          * be spent as it did not originally exist in the database.
@@ -214,14 +215,14 @@ genesis hash: 000002d56463941c20eae5cb474cc805b646515d18bc7dc222a0885b206eadb0
         fSkipProofOfWorkCheck = false;
         fTestnetToBeDeprecatedFieldRPC = false;
         fHeadersFirstSyncingActive = false;
-		
+
 		/*
         fRequireRPCPassword = true;
         fMiningRequiresPeers = true;
         fAllowMinDifficultyBlocks = true;
         fDefaultConsistencyChecks = false;
         fRequireStandard = false;
-        fMineBlocksOnDemand = false; 
+        fMineBlocksOnDemand = false;
         fTestnetToBeDeprecatedFieldRPC = true;
 		*/
 
@@ -263,11 +264,13 @@ public:
         nLastPOWBlock = 200;
         nMaturity = 15;
         nModifierUpdateBlock = 51197; //approx Mon, 17 Apr 2017 04:00:00 GMT
+        nMaxMoneyOut = 43199500 * COIN;
+
 
         //! Modify the testnet genesis block so the timestamp is valid for a later start.
         genesis.nTime = 1502817296;
         genesis.nNonce = 934213;
-		
+
 
         hashGenesisBlock = genesis.GetHash();
         assert(hashGenesisBlock == uint256("0x000002d56463941c20eae5cb474cc805b646515d18bc7dc222a0885b206eadb0"));
@@ -290,15 +293,15 @@ public:
 
         convertSeed6(vFixedSeeds, pnSeed6_test, ARRAYLEN(pnSeed6_test));
 
-		
+
         fRequireRPCPassword = true;
         fMiningRequiresPeers = true;
         fAllowMinDifficultyBlocks = true;
         fDefaultConsistencyChecks = false;
         fRequireStandard = false;
-        fMineBlocksOnDemand = false; 
+        fMineBlocksOnDemand = false;
         fTestnetToBeDeprecatedFieldRPC = true;
-		
+
 
 
         nPoolMaxTransactions = 2;

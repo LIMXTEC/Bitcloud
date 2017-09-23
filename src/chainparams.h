@@ -76,6 +76,7 @@ public:
     int LAST_POW_BLOCK() const { return nLastPOWBlock; }
     int COINBASE_MATURITY() const { return nMaturity; }
     int ModifierUpgradeBlock() const { return nModifierUpdateBlock; }
+    CAmount MaxMoneyOut() const { return nMaxMoneyOut; }
     /** The masternode count that we will allow the see-saw reward payments to be off by */
     int MasternodeCountDrift() const { return nMasternodeCountDrift; }
 	int MasternodeColleteralLimxDev() const { return nMasternodeColleteralLimxDev; }
@@ -117,6 +118,7 @@ protected:
     int nMaturity;
 	int nMaturityMAX;
     int nModifierUpdateBlock;
+    CAmount nMaxMoneyOut;
     int nMinerThreads;
     std::vector<CDNSSeedData> vSeeds;
     std::vector<unsigned char> base58Prefixes[MAX_BASE58_TYPES];
