@@ -424,7 +424,7 @@ boost::filesystem::path GetDefaultDataDir()
 // Unix: ~/.bitcloud
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "BTDXTEST";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "Bitcloud";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -436,7 +436,7 @@ boost::filesystem::path GetDefaultDataDir()
     // Mac
     pathRet /= "Library/Application Support";
     TryCreateDirectory(pathRet);
-    return pathRet / "BTDXTEST";
+    return pathRet / "Bitcloud";
 #else
     // Unix
     return pathRet / ".bitcloud";
