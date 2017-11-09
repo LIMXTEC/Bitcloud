@@ -36,7 +36,7 @@ public:
         useInstantX = false;
         useDarKsend = true;
         fAllowOtherInputs = false;
-        fAllowWatchOnly = false;
+        fAllowWatchOnly = true;
         nMinimumTotalFee = 0;
         fSplitBlock = false;
         nSplitBlock = 1;
@@ -71,6 +71,17 @@ public:
     void ListSelected(std::vector<COutPoint>& vOutpoints)
     {
         vOutpoints.assign(setSelected.begin(), setSelected.end());
+    }
+
+    unsigned int QuantitySelected()
+    {
+        return setSelected.size();
+    }
+
+    void SetSelection(std::set<COutPoint> setSelected)
+    {
+        this->setSelected.clear();
+        this->setSelected = setSelected;
     }
 
 private:
