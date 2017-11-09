@@ -1589,6 +1589,7 @@ static void LockWallet(CWallet* pWallet)
 {
     LOCK(cs_nWalletUnlockTime);
     nWalletUnlockTime = 0;
+    pWallet->fWalletUnlockAnonymizeOnly = false;
     pWallet->Lock();
 }
 
