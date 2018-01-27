@@ -2941,7 +2941,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>Generate Diamond Deposit Address</string>
+      <string>Generate Bitcloud Deposit Address</string>
      </property>
      <property name="icon">
       <iconset resource="../bitcloud.qrc">
@@ -3155,7 +3155,7 @@
        <string notr="true">border: 1px solid #61696c;margin-left:4px;</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="btnConvertDiamond">
+     <widget class="QPushButton" name="btnConvertBitcloud">
       <property name="geometry">
        <rect>
         <x>260</x>

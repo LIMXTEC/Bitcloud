@@ -1571,9 +1571,9 @@ bool AppInit2(boost::thread_group& threadGroup)
         nDarksendRounds = 99999;
     }
 
-    nAnonymizeDiamondAmount = GetArg("-anonymizebitcloudamount", 0);
-    if (nAnonymizeDiamondAmount > 999999) nAnonymizeDiamondAmount = 999999;
-    if (nAnonymizeDiamondAmount < 2) nAnonymizeDiamondAmount = 2;
+    nAnonymizeBitcloudAmount = GetArg("-anonymizebitcloudamount", 0);
+    if (nAnonymizeBitcloudAmount > 999999) nAnonymizeBitcloudAmount = 999999;
+    if (nAnonymizeBitcloudAmount < 2) nAnonymizeBitcloudAmount = 2;
 
     fEnableInstantX = GetBoolArg("-enableInstantx", fEnableInstantX);
     nInstantXDepth = GetArg("-Instantxdepth", nInstantXDepth);
@@ -1588,7 +1588,7 @@ bool AppInit2(boost::thread_group& threadGroup)
     LogPrintf("fLiteMode %d\n", fLiteMode);
     LogPrintf("nInstantXDepth %d\n", nInstantXDepth);
     LogPrintf("Darksend rounds %d\n", nDarksendRounds);
-    LogPrintf("Anonymize BTDX Amount %d\n", nAnonymizeDiamondAmount);
+    LogPrintf("Anonymize BTDX Amount %d\n", nAnonymizeBitcloudAmount);
     LogPrintf("Budget Mode %s\n", strBudgetMode.c_str());
 
     /* Denominations

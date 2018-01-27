@@ -300,7 +300,7 @@ static const CRPCCommand vRPCCommands[] =
         {"hidden", "reconsiderblock", &reconsiderblock, true, true, false},
         {"hidden", "setmocktime", &setmocktime, true, false, false},
 
-        /* Diamond features */
+        /* Bitcloud features */
         {"bitcloud", "masternode", &masternode, true, true, false},
         {"bitcloud", "masternodelist", &masternodelist, true, true, false},
         {"bitcloud", "mnbudget", &mnbudget, true, true, false},

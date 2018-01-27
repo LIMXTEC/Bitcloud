@@ -17,7 +17,7 @@ BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
             VALUE "CompanyName",        "BTDX"
-            VALUE "FileDescription",    "bitcloudd (OSS daemon/client for Diamond)"
+            VALUE "FileDescription",    "bitcloudd (OSS daemon/client for Bitcloud)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
             VALUE "InternalName",       "bitcloudd"
             VALUE "LegalCopyright",     COPYRIGHT_STR

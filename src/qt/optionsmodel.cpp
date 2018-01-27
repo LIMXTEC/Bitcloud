@@ -76,11 +76,11 @@ void OptionsModel::Init()
     if (!settings.contains("nDarksendRounds"))
         settings.setValue("nDarksendRounds", 2);
 
-    if (!settings.contains("nAnonymizeDiamondAmount"))
-        settings.setValue("nAnonymizeDiamondAmount", 1000);
+    if (!settings.contains("nAnonymizeBitcloudAmount"))
+        settings.setValue("nAnonymizeBitcloudAmount", 1000);
 
     nDarksendRounds = settings.value("nDarksendRounds").toLongLong();
-    nAnonymizeDiamondAmount = settings.value("nAnonymizeDiamondAmount").toLongLong();
+    nAnonymizeBitcloudAmount = settings.value("nAnonymizeBitcloudAmount").toLongLong();
 
     if (!settings.contains("fShowMasternodesTab"))
         settings.setValue("fShowMasternodesTab", masternodeConfig.getCount());
@@ -147,8 +147,8 @@ void OptionsModel::Init()
 
     if (settings.contains("nDarksendRounds"))
         SoftSetArg("-Darksendrounds", settings.value("nDarksendRounds").toString().toStdString());
-    if (settings.contains("nAnonymizeDiamondAmount"))
-        SoftSetArg("-anonymizebitcloudamount", settings.value("nAnonymizeDiamondAmount").toString().toStdString());
+    if (settings.contains("nAnonymizeBitcloudAmount"))
+        SoftSetArg("-anonymizebitcloudamount", settings.value("nAnonymizeBitcloudAmount").toString().toStdString());
 
     language = settings.value("language").toString();
 }
@@ -228,8 +228,8 @@ QVariant OptionsModel::data(const QModelIndex& index, int role) const
             return settings.value("nThreadsScriptVerif");
         case DarksendRounds:
             return QVariant(nDarksendRounds);
-        case AnonymizeDiamondAmount:
-            return QVariant(nAnonymizeDiamondAmount);
+        case AnonymizeBitcloudAmount:
+            return QVariant(nAnonymizeBitcloudAmount);
         case Listen:
             return settings.value("fListen");
         default:
@@ -338,10 +338,10 @@ bool OptionsModel::setData(const QModelIndex& index, const QVariant& value, int 
             settings.setValue("nDarksendRounds", nDarksendRounds);
             emit DarksendRoundsChanged(nDarksendRounds);
             break;
-        case AnonymizeDiamondAmount:
-            nAnonymizeDiamondAmount = value.toInt();
-            settings.setValue("nAnonymizeDiamondAmount", nAnonymizeDiamondAmount);
-            emit anonymizeDiamondAmountChanged(nAnonymizeDiamondAmount);
+        case AnonymizeBitcloudAmount:
+            nAnonymizeBitcloudAmount = value.toInt();
+            settings.setValue("nAnonymizeBitcloudAmount", nAnonymizeBitcloudAmount);
+            emit anonymizeBitcloudAmountChanged(nAnonymizeBitcloudAmount);
             break;
         case CoinControlFeatures:
             fCoinControlFeatures = value.toBool();

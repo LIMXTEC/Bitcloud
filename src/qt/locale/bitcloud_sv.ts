@@ -58,12 +58,12 @@
         <translation>Mottagaradresser</translation>
     </message>
     <message>
-        <source>These are your Diamond addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>De här är dina Diamond-adresser för att skicka betalningar. Kontrollera alltid mängden och mottagaradressen innan du skickar mynt.</translation>
+        <source>These are your Bitcloud addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>De här är dina Bitcloud-adresser för att skicka betalningar. Kontrollera alltid mängden och mottagaradressen innan du skickar mynt.</translation>
     </message>
     <message>
-        <source>These are your Diamond addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>De här är dina Diamond-adresser för betalningsmottagningar. Det rekommenderas att använda en ny mottagaradress för varje transaktion.</translation>
+        <source>These are your Bitcloud addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>De här är dina Bitcloud-adresser för betalningsmottagningar. Det rekommenderas att använda en ny mottagaradress för varje transaktion.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -176,8 +176,8 @@
         <translation>Plånbok krypterad</translation>
     </message>
     <message>
-        <source>Diamond will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitclouds from being stolen by malware infecting your computer.</source>
-        <translation>Diamond kommer nu att färdigställa krypteringsprocessen. Kom ihåg att krypteringen av din plånbok inte kan skydda dig helt och hållet från att dina Diamond stjäls av skadeprogram som har infekterat din dator.</translation>
+        <source>Bitcloud will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitclouds from being stolen by malware infecting your computer.</source>
+        <translation>Bitcloud kommer nu att färdigställa krypteringsprocessen. Kom ihåg att krypteringen av din plånbok inte kan skydda dig helt och hållet från att dina Bitcloud stjäls av skadeprogram som har infekterat din dator.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -219,8 +219,8 @@
 <context>
     <name>BitcoinGUI</name>
     <message>
-        <source>Diamond Core</source>
-        <translation>Diamond Core
+        <source>Bitcloud Core</source>
+        <translation>Bitcloud Core
 </translation>
     </message>
     <message>
@@ -244,8 +244,8 @@
         <translation>&amp;Skicka</translation>
     </message>
     <message>
-        <source>Send coins to a Diamond address</source>
-        <translation>Skicka mynt till en Diamond-adress</translation>
+        <source>Send coins to a Bitcloud address</source>
+        <translation>Skicka mynt till en Bitcloud-adress</translation>
     </message>
     <message>
         <source>&amp;Receive</source>
@@ -253,7 +253,7 @@
     </message>
     <message>
         <source>Request payments (generates QR codes and bitcloud: URIs)</source>
-        <translation>Begär betalningar (genererar QR-koder och Diamond:-URI:s)</translation>
+        <translation>Begär betalningar (genererar QR-koder och Bitcloud:-URI:s)</translation>
     </message>
     <message>
         <source>&amp;Transactions</source>
@@ -272,8 +272,8 @@
         <translation>Avsluta applikationen</translation>
     </message>
     <message>
-        <source>&amp;About Diamond Core</source>
-        <translation>&amp;Om Diamond Core</translation>
+        <source>&amp;About Bitcloud Core</source>
+        <translation>&amp;Om Bitcloud Core</translation>
     </message>
     <message>
         <source>About &amp;Qt</source>
@@ -288,8 +288,8 @@
         <translation>&amp;Alternativ...</translation>
     </message>
     <message>
-        <source>Modify configuration options for Diamond</source>
-        <translation>Anpassa konfigurationsalternatv för Diamond</translation>
+        <source>Modify configuration options for Bitcloud</source>
+        <translation>Anpassa konfigurationsalternatv för Bitcloud</translation>
     </message>
     <message>
         <source>&amp;Show / Hide</source>
@@ -340,16 +340,16 @@
         <translation>Signera &amp;meddelande...</translation>
     </message>
     <message>
-        <source>Sign messages with your Diamond addresses to prove you own them</source>
-        <translation>Signera meddelanden med dina Diamond-adresser för att bevisa att du äger dem</translation>
+        <source>Sign messages with your Bitcloud addresses to prove you own them</source>
+        <translation>Signera meddelanden med dina Bitcloud-adresser för att bevisa att du äger dem</translation>
     </message>
     <message>
         <source>&amp;Verify message...</source>
         <translation>&amp;Bekräfta meddelande...</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Diamond addresses</source>
-        <translation>Bekräfta meddelanden för att garantera att de signerades med de angivna Diamond-adresserna</translation>
+        <source>Verify messages to ensure they were signed with specified Bitcloud addresses</source>
+        <translation>Bekräfta meddelanden för att garantera att de signerades med de angivna Bitcloud-adresserna</translation>
     </message>
     <message>
         <source>&amp;Information</source>
@@ -405,15 +405,15 @@
     </message>
     <message>
         <source>Open a bitcloud: URI or payment request</source>
-        <translation>Öppna en Diamond-URI eller betalningsbegäran</translation>
+        <translation>Öppna en Bitcloud-URI eller betalningsbegäran</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>&amp;Kommandoradalternativ</translation>
     </message>
     <message>
-        <source>Show the Diamond Core help message to get a list with possible Diamond command-line options</source>
-        <translation>Visa Diamond Core-hjälpmeddelandet för att få en lista med möjliga Diamond-kommandoradalternativ</translation>
+        <source>Show the Bitcloud Core help message to get a list with possible Bitcloud command-line options</source>
+        <translation>Visa Bitcloud Core-hjälpmeddelandet för att få en lista med möjliga Bitcloud-kommandoradalternativ</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -790,16 +790,16 @@ Adress: %4
         <translation>Obfuscate-konfiguration</translation>
     </message>
     <message>
-        <source>Obfuscate was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening Diamond's configuration screen.</source>
-        <translation>Obfuscate ställdes framgångsrikt om till grundläggande (%1 och 2 omgångar). Du kan ändra detta när som helst genom att öppna Diamond:s konfigurationsskärm.</translation>
+        <source>Obfuscate was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening Bitcloud's configuration screen.</source>
+        <translation>Obfuscate ställdes framgångsrikt om till grundläggande (%1 och 2 omgångar). Du kan ändra detta när som helst genom att öppna Bitcloud:s konfigurationsskärm.</translation>
     </message>
     <message>
-        <source>Obfuscate was successfully set to high (%1 and 8 rounds). You can change this at any time by opening Diamond's configuration screen.</source>
-        <translation>Obfuscate ställdes framgångsrikt in på hög (%1 och 8 omgångar). Du kan ändra detta när som helst genom att öppna Diamond:s konfigurationsskärm.</translation>
+        <source>Obfuscate was successfully set to high (%1 and 8 rounds). You can change this at any time by opening Bitcloud's configuration screen.</source>
+        <translation>Obfuscate ställdes framgångsrikt in på hög (%1 och 8 omgångar). Du kan ändra detta när som helst genom att öppna Bitcloud:s konfigurationsskärm.</translation>
     </message>
     <message>
-        <source>Obfuscate was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening Diamond's configuration screen.</source>
-        <translation>Obfuscate ställdes framgångsrikt in på maximal (%1 och 16 omgångar). Du kan ändra detta när som helst genom att öppna Diamond:s konfigurationsskärm</translation>
+        <source>Obfuscate was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening Bitcloud's configuration screen.</source>
+        <translation>Obfuscate ställdes framgångsrikt in på maximal (%1 och 16 omgångar). Du kan ändra detta när som helst genom att öppna Bitcloud:s konfigurationsskärm</translation>
     </message>
 </context>
 <context>
@@ -841,8 +841,8 @@ Adress: %4
         <translation>Redigera avsändaradress</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Diamond address.</source>
-        <translation>Den angivna adressen "%1" är inte en giltig Diamond-adress.</translation>
+        <source>The entered address "%1" is not a valid Bitcloud address.</source>
+        <translation>Den angivna adressen "%1" är inte en giltig Bitcloud-adress.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -883,8 +883,8 @@ Adress: %4
 <context>
     <name>HelpMessageDialog</name>
     <message>
-        <source>Diamond Core</source>
-        <translation>Diamond Core
+        <source>Bitcloud Core</source>
+        <translation>Bitcloud Core
 </translation>
     </message>
     <message>
@@ -931,16 +931,16 @@ Adress: %4
         <translation>Välkommen</translation>
     </message>
     <message>
-        <source>Welcome to Diamond Core.</source>
-        <translation>Välkommen till Diamond Core.</translation>
+        <source>Welcome to Bitcloud Core.</source>
+        <translation>Välkommen till Bitcloud Core.</translation>
     </message>
     <message>
-        <source>As this is the first time the program is launched, you can choose where Diamond Core will store its data.</source>
-        <translation>Då detta är första gången programmet startas kan du välja var Diamond Core ska lagra sin data.</translation>
+        <source>As this is the first time the program is launched, you can choose where Bitcloud Core will store its data.</source>
+        <translation>Då detta är första gången programmet startas kan du välja var Bitcloud Core ska lagra sin data.</translation>
     </message>
     <message>
-        <source>Diamond Core will download and store a copy of the Diamond block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>Diamond Core kommer att laddas ned och lagra en kopia av Diamond:s blockkedja. Minst %1 GB data kommer att lagras i denna katalog och den kommer att växa med tiden. Plånboken kommer också att lagras i denna katalog.</translation>
+        <source>Bitcloud Core will download and store a copy of the Bitcloud block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>Bitcloud Core kommer att laddas ned och lagra en kopia av Bitcloud:s blockkedja. Minst %1 GB data kommer att lagras i denna katalog och den kommer att växa med tiden. Plånboken kommer också att lagras i denna katalog.</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -989,12 +989,12 @@ Adress: %4
         <translation>&amp;Huvud</translation>
     </message>
     <message>
-        <source>Automatically start Diamond after logging in to the system.</source>
-        <translation>Starta Diamond automatiskt efter systeminloggning.</translation>
+        <source>Automatically start Bitcloud after logging in to the system.</source>
+        <translation>Starta Bitcloud automatiskt efter systeminloggning.</translation>
     </message>
     <message>
-        <source>&amp;Start Diamond on system login</source>
-        <translation>&amp;Starta Diamond vid systeminloggning</translation>
+        <source>&amp;Start Bitcloud on system login</source>
+        <translation>&amp;Starta Bitcloud vid systeminloggning</translation>
     </message>
     <message>
         <source>Size of &amp;database cache</source>
@@ -1021,8 +1021,8 @@ Adress: %4
         <translation>Denna mängd fungerar som en tröskel att stänga av Obfuscate då det har uppnåtts.</translation>
     </message>
     <message>
-        <source>Amount of Diamond to keep anonymized</source>
-        <translation>Mängd Diamond att bibehålla anonymiserade</translation>
+        <source>Amount of Bitcloud to keep anonymized</source>
+        <translation>Mängd Bitcloud att bibehålla anonymiserade</translation>
     </message>
     <message>
         <source>W&amp;allet</source>
@@ -1049,8 +1049,8 @@ Adress: %4
         <translation>&amp;Nätverk</translation>
     </message>
     <message>
-        <source>Automatically open the Diamond client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Öppna Diamond:s klientport automatiskt på routern. Detta fungerar bara om din router stöder UPnP och är aktiverad.</translation>
+        <source>Automatically open the Bitcloud client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Öppna Bitcloud:s klientport automatiskt på routern. Detta fungerar bara om din router stöder UPnP och är aktiverad.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -1101,8 +1101,8 @@ Adress: %4
         <translation>Användargränssnitt&amp;språk: </translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting Diamond.</source>
-        <translation>Användargränssnittspråket kan ställas in här. Denna inställning träder i kraft efter att Diamond startats om.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting Bitcloud.</source>
+        <translation>Användargränssnittspråket kan ställas in här. Denna inställning träder i kraft efter att Bitcloud startats om.</translation>
     </message>
     <message>
         <source>Language missing or translation incomplete? Help contributing translations here:
@@ -1182,8 +1182,8 @@ https://www.transifex.com/bitcloud-crypto/bitcloud-wallet-translations/</transla
         <translation>Formulär</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Diamond network after a connection is established, but this process has not completed yet.</source>
-        <translation>Den visade informationen kan vara utdaterad. Din plånbok synkroniseras automatiskt med Diamond-nätverket efter att en anslutning har etablerats men denna process har ännu inte slutförts.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Bitcloud network after a connection is established, but this process has not completed yet.</source>
+        <translation>Den visade informationen kan vara utdaterad. Din plånbok synkroniseras automatiskt med Bitcloud-nätverket efter att en anslutning har etablerats men denna process har ännu inte slutförts.</translation>
     </message>
     <message>
         <source>Available:</source>
@@ -1435,8 +1435,8 @@ https://www.transifex.com/bitcloud-crypto/bitcloud-wallet-translations/</transla
         <translation>Antal anslutningar</translation>
     </message>
     <message>
-        <source>Open the Diamond debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Öppna Diamonds avsökningsloggfil från den nuvarande datakatalogen. Detta kan ta ett par sekunder för stora loggfiler.</translation>
+        <source>Open the Bitcloud debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Öppna Bitclouds avsökningsloggfil från den nuvarande datakatalogen. Detta kan ta ett par sekunder för stora loggfiler.</translation>
     </message>
     <message>
         <source>&amp;Open</source>
@@ -1507,8 +1507,8 @@ https://www.transifex.com/bitcloud-crypto/bitcloud-wallet-translations/</transla
         <translation>Ut:</translation>
     </message>
     <message>
-        <source>Welcome to the Diamond RPC console.</source>
-        <translation>Välkommen till Diamonds RPC-konsol.</translation>
+        <source>Welcome to the Bitcloud RPC console.</source>
+        <translation>Välkommen till Bitclouds RPC-konsol.</translation>
     </message>
     <message>
         <source>Use up and down arrows to navigate history, and &lt;b&gt;Ctrl-L&lt;/b&gt; to clear screen.</source>
@@ -1542,8 +1542,8 @@ https://www.transifex.com/bitcloud-crypto/bitcloud-wallet-translations/</transla
         <translation>Åt&amp;eranvänd en befintlig mottagaradress (rekommenderas inte)</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Diamond network.</source>
-        <translation>Ett valfritt meddelande att bifoga betalningsbegärandet vilket kommer att visas när begärandet öppnas. Observera: Meddelandet kommer inte att skickas med betalningen över Diamond-nätverket.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Bitcloud network.</source>
+        <translation>Ett valfritt meddelande att bifoga betalningsbegärandet vilket kommer att visas när begärandet öppnas. Observera: Meddelandet kommer inte att skickas med betalningen över Bitcloud-nätverket.</translation>
     </message>
     <message>
         <source>&amp;Message:</source>
@@ -1899,8 +1899,8 @@ https://www.transifex.com/bitcloud-crypto/bitcloud-wallet-translations/</transla
         <translation>Fel: Plånboken låstes upp enbart för att anonymisera mynt.</translation>
     </message>
     <message>
-        <source>Warning: Invalid Diamond address</source>
-        <translation>Varning: Ogiltig Diamond-adress</translation>
+        <source>Warning: Invalid Bitcloud address</source>
+        <translation>Varning: Ogiltig Bitcloud-adress</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -1958,8 +1958,8 @@ https://www.transifex.com/bitcloud-crypto/bitcloud-wallet-translations/</transla
         <translation>Meddelande:</translation>
     </message>
     <message>
-        <source>A message that was attached to the bitcloud: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Diamond network.</source>
-        <translation>Ett meddelande som bifogades till Diamond: URI vilket kommer att lagras med transaktionen så att du vet. Observera: Meddelandet kommer inte att skickas över Diamond-nätverket.</translation>
+        <source>A message that was attached to the bitcloud: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcloud network.</source>
+        <translation>Ett meddelande som bifogades till Bitcloud: URI vilket kommer att lagras med transaktionen så att du vet. Observera: Meddelandet kommer inte att skickas över Bitcloud-nätverket.</translation>
     </message>
     <message>
         <source>This is an unverified payment request.</source>
@@ -1985,8 +1985,8 @@ https://www.transifex.com/bitcloud-crypto/bitcloud-wallet-translations/</transla
 <context>
     <name>ShutdownWindow</name>
     <message>
-        <source>Diamond Core is shutting down...</source>
-        <translation>Diamond Core stängs ned...</translation>
+        <source>Bitcloud Core is shutting down...</source>
+        <translation>Bitcloud Core stängs ned...</translation>
     </message>
     <message>
         <source>Do not shut down the computer until this window disappears.</source>
@@ -2036,8 +2036,8 @@ https://www.transifex.com/bitcloud-crypto/bitcloud-wallet-translations/</transla
         <translation>Kopiera den nuvarande valda signaturen till systemurklippet</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Diamond address</source>
-        <translation>Signera meddelandet för att bevisa att du äger denna Diamond-adress</translation>
+        <source>Sign the message to prove you own this Bitcloud address</source>
+        <translation>Signera meddelandet för att bevisa att du äger denna Bitcloud-adress</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -2060,8 +2060,8 @@ https://www.transifex.com/bitcloud-crypto/bitcloud-wallet-translations/</transla
         <translation>Skriv in signeringsadressen, meddelandet, (försäkra dig om att du kopierar linjeavbrott, mellanslag, flikar med mera) och signera nedtill för att verifiera meddelandet. Var försiktig med att inte läsa in mer i signaturen än vad som finns i det signerade meddelandet för att undvika att bli lurad av en mellanhandattack.</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Diamond address</source>
-        <translation>Bekräfta meddelandet för att försäkra dig om att den signerades med den angivna Diamond-adressen</translation>
+        <source>Verify the message to ensure it was signed with the specified Bitcloud address</source>
+        <translation>Bekräfta meddelandet för att försäkra dig om att den signerades med den angivna Bitcloud-adressen</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -2127,8 +2127,8 @@ https://www.transifex.com/bitcloud-crypto/bitcloud-wallet-translations/</transla
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>Diamond Core</source>
-        <translation>Diamond Core
+        <source>Bitcloud Core</source>
+        <translation>Bitcloud Core
 </translation>
     </message>
     <message>
@@ -2140,8 +2140,8 @@ https://www.transifex.com/bitcloud-crypto/bitcloud-wallet-translations/</transla
         <translation>Bitcoin Core-utvecklarna</translation>
     </message>
     <message>
-        <source>The Diamond Core developers</source>
-        <translation>Diamond Core-utvecklarna</translation>
+        <source>The Bitcloud Core developers</source>
+        <translation>Bitcloud Core-utvecklarna</translation>
     </message>
     <message>
         <source>[testnet]</source>
@@ -2662,8 +2662,8 @@ https://www.transifex.com/bitcloud-crypto/bitcloud-wallet-translations/</transla
         <translation>Sammanbind till fastställd adress och avlyssna alltid den. Använd [host]:port-notation för IPv6</translation>
     </message>
     <message>
-        <source>Cannot obtain a lock on data directory %s. Diamond Core is probably already running.</source>
-        <translation>Kan inte erhålla ett lås på datakatalog %s. Diamond Core körs förmodligen redan.</translation>
+        <source>Cannot obtain a lock on data directory %s. Bitcloud Core is probably already running.</source>
+        <translation>Kan inte erhålla ett lås på datakatalog %s. Bitcloud Core körs förmodligen redan.</translation>
     </message>
     <message>
         <source>Obfuscate uses exact denominated amounts to send funds, you might simply need to anonymize some more coins.</source>
@@ -2718,8 +2718,8 @@ https://www.transifex.com/bitcloud-crypto/bitcloud-wallet-translations/</transla
         <translation>Detta är en förhandsutgiven testkompilering - använd på egen risk - använd inte för utvinning eller handlarapplikationer.</translation>
     </message>
     <message>
-        <source>Unable to bind to %s on this computer. Diamond Core is probably already running.</source>
-        <translation>Det går inte att binda till %s till denna dator. Diamond Core körs förmodligen redan.</translation>
+        <source>Unable to bind to %s on this computer. Bitcloud Core is probably already running.</source>
+        <translation>Det går inte att binda till %s till denna dator. Bitcloud Core körs förmodligen redan.</translation>
     </message>
     <message>
         <source>Unable to locate enough Obfuscate denominated funds for this transaction.</source>
@@ -2942,8 +2942,8 @@ https://www.transifex.com/bitcloud-crypto/bitcloud-wallet-translations/</transla
         <translation>Information</translation>
     </message>
     <message>
-        <source>Initialization sanity check failed. Diamond Core is shutting down.</source>
-        <translation>Initialiseringstillståndkontroll misslyckades. Diamond Core stängs ned.</translation>
+        <source>Initialization sanity check failed. Bitcloud Core is shutting down.</source>
+        <translation>Initialiseringstillståndkontroll misslyckades. Bitcloud Core stängs ned.</translation>
     </message>
     <message>
         <source>Input is not valid.</source>

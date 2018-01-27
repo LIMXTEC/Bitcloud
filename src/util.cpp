@@ -114,7 +114,7 @@ bool fLiteMode = false;
 bool fEnableInstantX = true;
 int nInstantXDepth = 5;
 int nDarksendRounds = 2;
-int nAnonymizeDiamondAmount = 1000;
+int nAnonymizeBitcloudAmount = 1000;
 int nLiquidityProvider = 0;
 /** Spork enforcement enabled time */
 int64_t enforceMasternodePaymentsTime = 4085657524;

@@ -307,7 +307,7 @@
     </message>
     <message>
         <location line="+6"/>
-        <source>Enter a Diamond Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <source>Enter a Bitcloud Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6706,7 +6706,7 @@ for example: alertnotify=echo %%s | mail -s &quot;BTDX Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+13"/>
-        <source>Generate Diamond Deposit Address</source>
+        <source>Generate Bitcloud Deposit Address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

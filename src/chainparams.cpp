@@ -336,8 +336,8 @@ public:
         nRejectBlockOutdatedMajority = 950;
         nToCheckBlockUpgradeMajority = 1000;
         nMinerThreads = 1;
-        nTargetTimespan = 24 * 60 * 60; // Diamond: 1 day
-        nTargetSpacing = 1 * 60;        // Diamond: 1 minutes
+        nTargetTimespan = 24 * 60 * 60; // Bitcloud: 1 day
+        nTargetSpacing = 1 * 60;        // Bitcloud: 1 minutes
         bnProofOfWorkLimit = ~uint256(0) >> 1;
         genesis.nTime = 1502817296;
         genesis.nBits = 0x1e0ffff0;

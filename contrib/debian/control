@@ -30,7 +30,7 @@ Package: bitcloudd
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: peer-to-peer network based digital currency - daemon
- Diamond is a free open source peer-to-peer electronic cash system that
+ Bitcloud is a free open source peer-to-peer electronic cash system that
  is completely decentralized, without the need for a central server or
  trusted parties.  Users hold the crypto keys to their own money and
  transact directly with each other, with the help of a P2P network to
@@ -46,7 +46,7 @@ Package: bitcloud-qt
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: peer-to-peer network based digital currency - Qt GUI
- Diamond is a free open source peer-to-peer electronic cash system that
+ Bitcloud is a free open source peer-to-peer electronic cash system that
  is completely decentralized, without the need for a central server or
  trusted parties.  Users hold the crypto keys to their own money and
  transact directly with each other, with the help of a P2P network to
@@ -55,4 +55,4 @@ Description: peer-to-peer network based digital currency - Qt GUI
  Full transaction history is stored locally at each client.  This
  requires 1+ GB of space, slowly growing.
  .
- This package provides Diamond-Qt, a GUI for Diamond based on Qt.
+ This package provides Bitcloud-Qt, a GUI for Bitcloud based on Qt.

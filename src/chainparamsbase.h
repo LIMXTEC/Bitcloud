@@ -10,7 +10,7 @@
 
 /**
  * CBaseChainParams defines the base parameters (shared between bitcloud-cli and bitcloudd)
- * of a given instance of the Diamond system.
+ * of a given instance of the Bitcloud system.
  */
 class CBaseChainParams
 {

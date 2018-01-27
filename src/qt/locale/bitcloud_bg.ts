@@ -62,12 +62,12 @@
         <translation>Адреси за получаване</translation>
     </message>
     <message>
-        <source>These are your Diamond addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Това са вашите Diamond адреси за изпращане на плащания. Преди изпращане винаги проверявайте количеството и адреса за получаване на монетите.</translation>
+        <source>These are your Bitcloud addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Това са вашите Bitcloud адреси за изпращане на плащания. Преди изпращане винаги проверявайте количеството и адреса за получаване на монетите.</translation>
     </message>
     <message>
-        <source>These are your Diamond addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Това са вашите Diamond адреси за получаване на плащания. Препоръчително е да използвате нов адрес за всяка нова транзакция. </translation>
+        <source>These are your Bitcloud addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Това са вашите Bitcloud адреси за получаване на плащания. Препоръчително е да използвате нов адрес за всяка нова транзакция. </translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -188,8 +188,8 @@
         <translation>Портфейлът е шифриран</translation>
     </message>
     <message>
-        <source>Diamond will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitclouds from being stolen by malware infecting your computer.</source>
-        <translation>Diamond ще се затвори, за да завърши процеса по шифриране. Запомнете, че шифрирането на вашия портфейл не може напълно да ви предпази от кражба на монетите чрез зловреден софтуер инфектирал компютъра ви. </translation>
+        <source>Bitcloud will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitclouds from being stolen by malware infecting your computer.</source>
+        <translation>Bitcloud ще се затвори, за да завърши процеса по шифриране. Запомнете, че шифрирането на вашия портфейл не може напълно да ви предпази от кражба на монетите чрез зловреден софтуер инфектирал компютъра ви. </translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -231,8 +231,8 @@
 <context>
     <name>BitcoinGUI</name>
     <message>
-        <source>Diamond Core</source>
-        <translation>Diamond Ядро</translation>
+        <source>Bitcloud Core</source>
+        <translation>Bitcloud Ядро</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -255,8 +255,8 @@
         <translation>&amp;Изпращане</translation>
     </message>
     <message>
-        <source>Send coins to a Diamond address</source>
-        <translation>Изпращане на монети към Diamond адрес</translation>
+        <source>Send coins to a Bitcloud address</source>
+        <translation>Изпращане на монети към Bitcloud адрес</translation>
     </message>
     <message>
         <source>&amp;Receive</source>
@@ -264,7 +264,7 @@
     </message>
     <message>
         <source>Request payments (generates QR codes and bitcloud: URIs)</source>
-        <translation>Заявка за плащане (генерира QR кодове и Diamond: URI)</translation>
+        <translation>Заявка за плащане (генерира QR кодове и Bitcloud: URI)</translation>
     </message>
     <message>
         <source>&amp;Transactions</source>
@@ -283,12 +283,12 @@
         <translation>Изход от приложението</translation>
     </message>
     <message>
-        <source>&amp;About Diamond Core</source>
-        <translation>&amp;За Diamond ядрото</translation>
+        <source>&amp;About Bitcloud Core</source>
+        <translation>&amp;За Bitcloud ядрото</translation>
     </message>
     <message>
-        <source>Show information about Diamond Core</source>
-        <translation>Покаци информация за Diamond Core</translation>
+        <source>Show information about Bitcloud Core</source>
+        <translation>Покаци информация за Bitcloud Core</translation>
     </message>
     <message>
         <source>About &amp;Qt</source>
@@ -303,8 +303,8 @@
         <translation>&amp;Опции...</translation>
     </message>
     <message>
-        <source>Modify configuration options for Diamond</source>
-        <translation>Промяна на опции за конфигуриране на Diamond</translation>
+        <source>Modify configuration options for Bitcloud</source>
+        <translation>Промяна на опции за конфигуриране на Bitcloud</translation>
     </message>
     <message>
         <source>&amp;Show / Hide</source>
@@ -355,16 +355,16 @@
         <translation>Подписване на &amp;съобщение...</translation>
     </message>
     <message>
-        <source>Sign messages with your Diamond addresses to prove you own them</source>
-        <translation>Подпиши съобщения с твоите Diamond адреси за да докажеш че ги притежаваш</translation>
+        <source>Sign messages with your Bitcloud addresses to prove you own them</source>
+        <translation>Подпиши съобщения с твоите Bitcloud адреси за да докажеш че ги притежаваш</translation>
     </message>
     <message>
         <source>&amp;Verify message...</source>
         <translation>&amp;Проверка на съобщение...</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Diamond addresses</source>
-        <translation>Проверете съобщенията, за да сте сигурни че са подписани с определен Diamond адрес</translation>
+        <source>Verify messages to ensure they were signed with specified Bitcloud addresses</source>
+        <translation>Проверете съобщенията, за да сте сигурни че са подписани с определен Bitcloud адрес</translation>
     </message>
     <message>
         <source>&amp;Information</source>
@@ -444,15 +444,15 @@
     </message>
     <message>
         <source>Open a bitcloud: URI or payment request</source>
-        <translation>Отвори Diamond: URI или заявка за плащане</translation>
+        <translation>Отвори Bitcloud: URI или заявка за плащане</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>&amp;Опции на командния ред</translation>
     </message>
     <message>
-        <source>Diamond Core client</source>
-        <translation>Diamond Core клиент</translation>
+        <source>Bitcloud Core client</source>
+        <translation>Bitcloud Core клиент</translation>
     </message>
     <message numerus="yes">
         <source>Processed %n blocks of transaction history.</source>
@@ -463,8 +463,8 @@
         <translation>Синхронизиране на допълнителни данни: %p%</translation>
     </message>
     <message>
-        <source>Show the Diamond Core help message to get a list with possible Diamond command-line options</source>
-        <translation>Покажи съобщението за помощ на Diamond ядрото за да получиш списък на възможните опции за командния ред</translation>
+        <source>Show the Bitcloud Core help message to get a list with possible Bitcloud command-line options</source>
+        <translation>Покажи съобщението за помощ на Bitcloud ядрото за да получиш списък на възможните опции за командния ред</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -487,8 +487,8 @@
         <translation>Лента с инструменти</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Diamond network</source>
-        <translation><numerusform>%n активни връзки към Diamond мрежата</numerusform><numerusform>%n активни връзки към Diamond мрежата</numerusform></translation>
+        <source>%n active connection(s) to Bitcloud network</source>
+        <translation><numerusform>%n активни връзки към Bitcloud мрежата</numerusform><numerusform>%n активни връзки към Bitcloud мрежата</numerusform></translation>
     </message>
     <message>
         <source>Synchronizing with network...</source>
@@ -896,16 +896,16 @@ Address: %4
         <translation>Настройка на Obfuscate </translation>
     </message>
     <message>
-        <source>Obfuscate was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening Diamond's configuration screen.</source>
-        <translation>Obfuscate беше успешно настроен на режим основен (%1 и 2 цикъла). Можете да промените тази настройка по всяко време, като отворите конфигурационния прозорец на Diamond.</translation>
+        <source>Obfuscate was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening Bitcloud's configuration screen.</source>
+        <translation>Obfuscate беше успешно настроен на режим основен (%1 и 2 цикъла). Можете да промените тази настройка по всяко време, като отворите конфигурационния прозорец на Bitcloud.</translation>
     </message>
     <message>
-        <source>Obfuscate was successfully set to high (%1 and 8 rounds). You can change this at any time by opening Diamond's configuration screen.</source>
-        <translation>Obfuscate  беше успешно настроен на режим висок (%1 и 8 цикъла). Можете да промените тази настройка по всяко време, като отворите конфигурационния прозорец на Diamond.</translation>
+        <source>Obfuscate was successfully set to high (%1 and 8 rounds). You can change this at any time by opening Bitcloud's configuration screen.</source>
+        <translation>Obfuscate  беше успешно настроен на режим висок (%1 и 8 цикъла). Можете да промените тази настройка по всяко време, като отворите конфигурационния прозорец на Bitcloud.</translation>
     </message>
     <message>
-        <source>Obfuscate was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening Diamond's configuration screen.</source>
-        <translation>Obfuscate беше успешно настроен на режим максимум (%1 и 16 цикъла). Можете да промените тази настройка по всяко време, като отворите конфигурационния прозорец на Diamond.</translation>
+        <source>Obfuscate was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening Bitcloud's configuration screen.</source>
+        <translation>Obfuscate беше успешно настроен на режим максимум (%1 и 16 цикъла). Можете да промените тази настройка по всяко време, като отворите конфигурационния прозорец на Bitcloud.</translation>
     </message>
 </context>
 <context>
@@ -947,8 +947,8 @@ Address: %4
         <translation>Редактиране на адрес за изпращане</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Diamond address.</source>
-        <translation>Въведеният адрес "%1" не е валиден Diamond адрес.</translation>
+        <source>The entered address "%1" is not a valid Bitcloud address.</source>
+        <translation>Въведеният адрес "%1" не е валиден Bitcloud адрес.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -989,8 +989,8 @@ Address: %4
 <context>
     <name>HelpMessageDialog</name>
     <message>
-        <source>Diamond Core</source>
-        <translation>Diamond ядро</translation>
+        <source>Bitcloud Core</source>
+        <translation>Bitcloud ядро</translation>
     </message>
     <message>
         <source>version</source>
@@ -1001,8 +1001,8 @@ Address: %4
         <translation>(%1-битов)</translation>
     </message>
     <message>
-        <source>About Diamond Core</source>
-        <translation>За Diamond ядрото</translation>
+        <source>About Bitcloud Core</source>
+        <translation>За Bitcloud ядрото</translation>
     </message>
     <message>
         <source>Command-line options</source>
@@ -1048,16 +1048,16 @@ Address: %4
         <translation>Добре дошли</translation>
     </message>
     <message>
-        <source>Welcome to Diamond Core.</source>
-        <translation>Добре дошли в ядрото на Diamond.</translation>
+        <source>Welcome to Bitcloud Core.</source>
+        <translation>Добре дошли в ядрото на Bitcloud.</translation>
     </message>
     <message>
-        <source>As this is the first time the program is launched, you can choose where Diamond Core will store its data.</source>
-        <translation>Тъй като програмата се стартира за първи път вие може да изберете къде Diamond да съхранява своята информация.</translation>
+        <source>As this is the first time the program is launched, you can choose where Bitcloud Core will store its data.</source>
+        <translation>Тъй като програмата се стартира за първи път вие може да изберете къде Bitcloud да съхранява своята информация.</translation>
     </message>
     <message>
-        <source>Diamond Core will download and store a copy of the Diamond block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>Diamond ще свали и съхрани копие на Diamond регистъра на блокове. Информацията ще заеме поне %1ГБ  пространство и ще нараства с времето. В тази папка ще бъде съхранен и портфейла. </translation>
+        <source>Bitcloud Core will download and store a copy of the Bitcloud block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>Bitcloud ще свали и съхрани копие на Bitcloud регистъра на блокове. Информацията ще заеме поне %1ГБ  пространство и ще нараства с времето. В тази папка ще бъде съхранен и портфейла. </translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -1068,8 +1068,8 @@ Address: %4
         <translation>Определете папка по ваш избор:</translation>
     </message>
     <message>
-        <source>Diamond Core</source>
-        <translation>Diamond ядро</translation>
+        <source>Bitcloud Core</source>
+        <translation>Bitcloud ядро</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" cannot be created.</source>
@@ -1122,12 +1122,12 @@ Address: %4
         <translation>&amp;Основни</translation>
     </message>
     <message>
-        <source>Automatically start Diamond after logging in to the system.</source>
-        <translation>Автоматично стартиране на Diamond след влизане в системата.</translation>
+        <source>Automatically start Bitcloud after logging in to the system.</source>
+        <translation>Автоматично стартиране на Bitcloud след влизане в системата.</translation>
     </message>
     <message>
-        <source>&amp;Start Diamond on system login</source>
-        <translation>&amp;Стартирне на Diamond при влизане в системата.</translation>
+        <source>&amp;Start Bitcloud on system login</source>
+        <translation>&amp;Стартирне на Bitcloud при влизане в системата.</translation>
     </message>
     <message>
         <source>Size of &amp;database cache</source>
@@ -1147,15 +1147,15 @@ Address: %4
     </message>
     <message>
         <source>Obfuscate rounds to use</source>
-        <translation>Използвани Diamond цикли</translation>
+        <translation>Използвани Bitcloud цикли</translation>
     </message>
     <message>
         <source>This amount acts as a threshold to turn off Obfuscate once it's reached.</source>
         <translation>Тази сума действа като праг, за да се изключи Obfuscate, когато той е достигнат.</translation>
     </message>
     <message>
-        <source>Amount of Diamond to keep anonymized</source>
-        <translation>Постоянно поддържано количество анонимни Diamond монети </translation>
+        <source>Amount of Bitcloud to keep anonymized</source>
+        <translation>Постоянно поддържано количество анонимни Bitcloud монети </translation>
     </message>
     <message>
         <source>W&amp;allet</source>
@@ -1174,8 +1174,8 @@ Address: %4
         <translation>Разрешени входящи връзки</translation>
     </message>
     <message>
-        <source>Connect to the Diamond network through a SOCKS5 proxy.</source>
-        <translation>Свързване с мрежата на Diamond чрез SOCKS5 прокси.</translation>
+        <source>Connect to the Bitcloud network through a SOCKS5 proxy.</source>
+        <translation>Свързване с мрежата на Bitcloud чрез SOCKS5 прокси.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1206,8 +1206,8 @@ Address: %4
         <translation>&amp;Мрежа</translation>
     </message>
     <message>
-        <source>Automatically open the Diamond client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Автоматично отваря порта за Diamond клиента в маршрутизатора. Това работи само когато вашият маршрутизатор поддържа UPnP и той е разрешен.</translation>
+        <source>Automatically open the Bitcloud client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Автоматично отваря порта за Bitcloud клиента в маршрутизатора. Това работи само когато вашият маршрутизатор поддържа UPnP и той е разрешен.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -1258,8 +1258,8 @@ Address: %4
         <translation>Език на потребителски &amp;изглед :</translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting Diamond.</source>
-        <translation>Тук можете да промените езика на потребителския изглед. Настройката ще влезе в сила след рестартиране на Diamond.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting Bitcloud.</source>
+        <translation>Тук можете да промените езика на потребителския изглед. Настройката ще влезе в сила след рестартиране на Bitcloud.</translation>
     </message>
     <message>
         <source>Language missing or translation incomplete? Help contributing translations here:
@@ -1347,8 +1347,8 @@ https://www.transifex.com/bitcloud-crypto/bitcloud-wallet-translations/</transla
         <translation>Формуляр</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Diamond network after a connection is established, but this process has not completed yet.</source>
-        <translation>Показаната информация може да е остаряла. Вашият портфейл се синхронизира автоматично след изграждането на връзка с Diamond мрежата, но този процес все още не е завършен.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Bitcloud network after a connection is established, but this process has not completed yet.</source>
+        <translation>Показаната информация може да е остаряла. Вашият портфейл се синхронизира автоматично след изграждането на връзка с Bitcloud мрежата, но този процес все още не е завършен.</translation>
     </message>
     <message>
         <source>Available:</source>
@@ -1588,8 +1588,8 @@ https://www.transifex.com/bitcloud-crypto/bitcloud-wallet-translations/</transla
         <translation>Невалиден адрес за плащане %1</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid Diamond address or malformed URI parameters.</source>
-        <translation>Грешка при анализ на URI! Това може да е следствие от неправилен Diamond адрес или неправилно зададени URI параметри.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid Bitcloud address or malformed URI parameters.</source>
+        <translation>Грешка при анализ на URI! Това може да е следствие от неправилен Bitcloud адрес или неправилно зададени URI параметри.</translation>
     </message>
     <message>
         <source>Payment request file cannot be read! This can be caused by an invalid payment request file.</source>
@@ -1674,8 +1674,8 @@ https://www.transifex.com/bitcloud-crypto/bitcloud-wallet-translations/</transla
         <translation>Сума</translation>
     </message>
     <message>
-        <source>Enter a Diamond address (e.g. %1)</source>
-        <translation>Въведете Diamond адрес (напр.%1)</translation>
+        <source>Enter a Bitcloud address (e.g. %1)</source>
+        <translation>Въведете Bitcloud адрес (напр.%1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1764,8 +1764,8 @@ https://www.transifex.com/bitcloud-crypto/bitcloud-wallet-translations/</transla
         <translation>Брой връзки</translation>
     </message>
     <message>
-        <source>Open the Diamond debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Отваря файла за откриване на грешки на Diamond от текущата папка.  За по-големите файлове това може да отнеме няколко секунди.</translation>
+        <source>Open the Bitcloud debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Отваря файла за откриване на грешки на Bitcloud от текущата папка.  За по-големите файлове това може да отнеме няколко секунди.</translation>
     </message>
     <message>
         <source>&amp;Open</source>
@@ -1972,8 +1972,8 @@ https://www.transifex.com/bitcloud-crypto/bitcloud-wallet-translations/</transla
         <translation>Изход:</translation>
     </message>
     <message>
-        <source>Welcome to the Diamond RPC console.</source>
-        <translation>Добре дошли в Diamond RPC (Remote Procedure Call) конзолата.</translation>
+        <source>Welcome to the Bitcloud RPC console.</source>
+        <translation>Добре дошли в Bitcloud RPC (Remote Procedure Call) конзолата.</translation>
     </message>
     <message>
         <source>Use up and down arrows to navigate history, and &lt;b&gt;Ctrl-L&lt;/b&gt; to clear screen.</source>
@@ -2035,8 +2035,8 @@ https://www.transifex.com/bitcloud-crypto/bitcloud-wallet-translations/</transla
         <translation>П&amp;овторно използване на съществуващ адрес за получаване (не се препоръчва)</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Diamond network.</source>
-        <translation>Възможност  да се прикрепи съобщение към заявката за плащане, което да бъде показано при отваряне на заявката. Забележка: съобщението няма да бъде изпратено с плащането по мрежата на Diamond.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Bitcloud network.</source>
+        <translation>Възможност  да се прикрепи съобщение към заявката за плащане, което да бъде показано при отваряне на заявката. Забележка: съобщението няма да бъде изпратено с плащането по мрежата на Bitcloud.</translation>
     </message>
     <message>
         <source>&amp;Message:</source>
@@ -2047,8 +2047,8 @@ https://www.transifex.com/bitcloud-crypto/bitcloud-wallet-translations/</transla
         <translation>Възможност да се прикрепи наименование към новия адрес за получаване.</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened.&lt;br&gt;Note: The message will not be sent with the payment over the Diamond network.</source>
-        <translation>Възможност  да се прикрепи съобщение към заявката за плащане, което да бъде показано при отваряне на заявката. &lt;br&gt;Забележка: съобщението няма да бъде изпратено с плащането по мрежата на Diamond.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened.&lt;br&gt;Note: The message will not be sent with the payment over the Bitcloud network.</source>
+        <translation>Възможност  да се прикрепи съобщение към заявката за плащане, което да бъде показано при отваряне на заявката. &lt;br&gt;Забележка: съобщението няма да бъде изпратено с плащането по мрежата на Bitcloud.</translation>
     </message>
     <message>
         <source>Use this form to request payments. All fields are &lt;b&gt;optional&lt;/b&gt;.</source>
@@ -2496,8 +2496,8 @@ https://www.transifex.com/bitcloud-crypto/bitcloud-wallet-translations/</transla
         <translation>Плати само минималната такса от %1</translation>
     </message>
     <message>
-        <source>Warning: Invalid Diamond address</source>
-        <translation>Внимание: Невалиден Diamond адрес</translation>
+        <source>Warning: Invalid Bitcloud address</source>
+        <translation>Внимание: Невалиден Bitcloud адрес</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -2519,8 +2519,8 @@ https://www.transifex.com/bitcloud-crypto/bitcloud-wallet-translations/</transla
         <translation>Плати &amp;На:</translation>
     </message>
     <message>
-        <source>The Diamond address to send the payment to</source>
-        <translation>Diamond адресът да изпрати плащането към </translation>
+        <source>The Bitcloud address to send the payment to</source>
+        <translation>Bitcloud адресът да изпрати плащането към </translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2559,8 +2559,8 @@ https://www.transifex.com/bitcloud-crypto/bitcloud-wallet-translations/</transla
         <translation>Съобщение:</translation>
     </message>
     <message>
-        <source>A message that was attached to the bitcloud: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Diamond network.</source>
-        <translation>Съобщението което беше прикрепено към bitcloud: URI ще бъде запазено с транзакцията за ваше сведение. Забележка: Това съобщение няма да бъде изпратено през Diamond мрежата.</translation>
+        <source>A message that was attached to the bitcloud: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcloud network.</source>
+        <translation>Съобщението което беше прикрепено към bitcloud: URI ще бъде запазено с транзакцията за ваше сведение. Забележка: Това съобщение няма да бъде изпратено през Bitcloud мрежата.</translation>
     </message>
     <message>
         <source>This is an unverified payment request.</source>
@@ -2586,8 +2586,8 @@ https://www.transifex.com/bitcloud-crypto/bitcloud-wallet-translations/</transla
 <context>
     <name>ShutdownWindow</name>
     <message>
-        <source>Diamond Core is shutting down...</source>
-        <translation>Diamond ядрото се изключва...</translation>
+        <source>Bitcloud Core is shutting down...</source>
+        <translation>Bitcloud ядрото се изключва...</translation>
     </message>
     <message>
         <source>Do not shut down the computer until this window disappears.</source>
@@ -2609,8 +2609,8 @@ https://www.transifex.com/bitcloud-crypto/bitcloud-wallet-translations/</transla
         <translation>Можете да подпишете съобщение като доказателство, че притежавате определен адрес. Бъдете внимателни и не подписвайте съобщения, които биха разкрили лична информация без вашето съгласие.</translation>
     </message>
     <message>
-        <source>The Diamond address to sign the message with</source>
-        <translation>Diamond адресът да подпише съобщението</translation>
+        <source>The Bitcloud address to sign the message with</source>
+        <translation>Bitcloud адресът да подпише съобщението</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2641,8 +2641,8 @@ https://www.transifex.com/bitcloud-crypto/bitcloud-wallet-translations/</transla
         <translation>Копиране на текущия подпис в системния клипборд</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Diamond address</source>
-        <translation>Подпиши съобщението за да докажеш че притежаваш този Diamond адрес</translation>
+        <source>Sign the message to prove you own this Bitcloud address</source>
+        <translation>Подпиши съобщението за да докажеш че притежаваш този Bitcloud адрес</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -2665,12 +2665,12 @@ https://www.transifex.com/bitcloud-crypto/bitcloud-wallet-translations/</transla
         <translation>Въведете подписания адрес, съобщението (уверете се, че сте копирали редовете, спациите, табовете и другите точно) и подпишете отдолу, за да удостоверите съобщението. Внимавайте да не вмъкнете излишни символи в подписа от това, което е в самото съобщение, за да избегнете риска от злонамерна външа намеса.</translation>
     </message>
     <message>
-        <source>The Diamond address the message was signed with</source>
-        <translation>Diamond адресът ,с който е подписано съобщението</translation>
+        <source>The Bitcloud address the message was signed with</source>
+        <translation>Bitcloud адресът ,с който е подписано съобщението</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Diamond address</source>
-        <translation>Проверете съобщението, за да сте сигурни че е подписано с определен Diamond адрес</translation>
+        <source>Verify the message to ensure it was signed with the specified Bitcloud address</source>
+        <translation>Проверете съобщението, за да сте сигурни че е подписано с определен Bitcloud адрес</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -2736,8 +2736,8 @@ https://www.transifex.com/bitcloud-crypto/bitcloud-wallet-translations/</transla
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>Diamond Core</source>
-        <translation>Diamond Ядро</translation>
+        <source>Bitcloud Core</source>
+        <translation>Bitcloud Ядро</translation>
     </message>
     <message>
         <source>Version %1</source>
@@ -2748,8 +2748,8 @@ https://www.transifex.com/bitcloud-crypto/bitcloud-wallet-translations/</transla
         <translation>Водещи Bitcoin разработчици</translation>
     </message>
     <message>
-        <source>The Diamond Core developers</source>
-        <translation>Водещи Diamond разработчици</translation>
+        <source>The Bitcloud Core developers</source>
+        <translation>Водещи Bitcloud разработчици</translation>
     </message>
     <message>
         <source>[testnet]</source>
@@ -3326,8 +3326,8 @@ https://www.transifex.com/bitcloud-crypto/bitcloud-wallet-translations/</transla
         <translation>Свързва се с посочения адрес и винаги слуша за него. Използвайте [хост]:порт за изписване при IPv6</translation>
     </message>
     <message>
-        <source>Cannot obtain a lock on data directory %s. Diamond Core is probably already running.</source>
-        <translation>Не може да се заключи дата директорията %s. Diamond ядрото вече работи.</translation>
+        <source>Cannot obtain a lock on data directory %s. Bitcloud Core is probably already running.</source>
+        <translation>Не може да се заключи дата директорията %s. Bitcloud ядрото вече работи.</translation>
     </message>
     <message>
         <source>Obfuscate uses exact denominated amounts to send funds, you might simply need to anonymize some more coins.</source>
@@ -3382,8 +3382,8 @@ https://www.transifex.com/bitcloud-crypto/bitcloud-wallet-translations/</transla
         <translation>Това е предварителна тест версия - използвайте я на ваша отговорност - не използвайте за копане или за търговски приложения.</translation>
     </message>
     <message>
-        <source>Unable to bind to %s on this computer. Diamond Core is probably already running.</source>
-        <translation>Не може да се свърже с %s на този компютър. Diamond ядрото най-вероятно вече работи.</translation>
+        <source>Unable to bind to %s on this computer. Bitcloud Core is probably already running.</source>
+        <translation>Не може да се свърже с %s на този компютър. Bitcloud ядрото най-вероятно вече работи.</translation>
     </message>
     <message>
         <source>Unable to locate enough Obfuscate denominated funds for this transaction.</source>
@@ -3614,8 +3614,8 @@ https://www.transifex.com/bitcloud-crypto/bitcloud-wallet-translations/</transla
         <translation>Изтриване на всички транзакции на портфейла и  възстановява само тези части на блок веригата чрез -rescan при стартиране</translation>
     </message>
     <message>
-        <source>Disable all Diamond specific functionality (Masternodes, Obfuscate, InstantX, Budgeting) (0-1, default: %u)</source>
-        <translation>Изключване на всички специфични Diamond функции (Masternodes, Obfuscate, InstantX, Budgeting) (0-1, по подразбиране: %u)</translation>
+        <source>Disable all Bitcloud specific functionality (Masternodes, Obfuscate, InstantX, Budgeting) (0-1, default: %u)</source>
+        <translation>Изключване на всички специфични Bitcloud функции (Masternodes, Obfuscate, InstantX, Budgeting) (0-1, по подразбиране: %u)</translation>
     </message>
     <message>
         <source>Distributed under the MIT software license, see the accompanying file COPYING or &lt;http://www.opensource.org/licenses/mit-license.php&gt;.</source>
@@ -3719,9 +3719,9 @@ rpcpassword=%s
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s "Diamond Alert" admin@foo.com
+for example: alertnotify=echo %%s | mail -s "Bitcloud Alert" admin@foo.com
 </source>
-        <translation>За използване на bitcloudd, или the -server опция към bitcloud-qt, трябва да зададете rpcpassword в конфигурационния файл: %s Препоръчително е да използвате следната произволна парола: rpcuser=bitcloudrpc rpcpassword=%s (не е нужно да запомняте тази парола) Потребителя и паролата НЕ ТРЯБВА да са еднакви. Ако файла не съществува , създайте го с права за само за четене. Препоръчително е да създадете сигнал за уведомяване за да бъдете осведомени при проблем; Пример: alertnotify=echo %%s | mail -s "Diamond Alert" admin@foo.com 
+        <translation>За използване на bitcloudd, или the -server опция към bitcloud-qt, трябва да зададете rpcpassword в конфигурационния файл: %s Препоръчително е да използвате следната произволна парола: rpcuser=bitcloudrpc rpcpassword=%s (не е нужно да запомняте тази парола) Потребителя и паролата НЕ ТРЯБВА да са еднакви. Ако файла не съществува , създайте го с права за само за четене. Препоръчително е да създадете сигнал за уведомяване за да бъдете осведомени при проблем; Пример: alertnotify=echo %%s | mail -s "Bitcloud Alert" admin@foo.com 
 </translation>
     </message>
     <message>
@@ -3737,8 +3737,8 @@ for example: alertnotify=echo %%s | mail -s "Diamond Alert" admin@foo.com
         <translation>Внимание: -maxtxfee  е с много голяма зададена стойност! Това е транзакционната такса, която ще платите ако направите единична транзакция.</translation>
     </message>
     <message>
-        <source>Warning: Please check that your computer's date and time are correct! If your clock is wrong Diamond Core will not work properly.</source>
-        <translation>Внимание: Моля проверете дали датата и часът на вашият компютър са верни! Ако часовникът ви не е сверен, Diamond Core няма да работи правилно.</translation>
+        <source>Warning: Please check that your computer's date and time are correct! If your clock is wrong Bitcloud Core will not work properly.</source>
+        <translation>Внимание: Моля проверете дали датата и часът на вашият компютър са верни! Ако часовникът ви не е сверен, Bitcloud Core няма да работи правилно.</translation>
     </message>
     <message>
         <source>Whitelist peers connecting from the given netmask or IP address. Can be specified multiple times.</source>
@@ -3791,8 +3791,8 @@ for example: alertnotify=echo %%s | mail -s "Diamond Alert" admin@foo.com
         <translation>Запазени права (C) 2009-%i Bitcoin Core разработчици</translation>
     </message>
     <message>
-        <source>Copyright (C) 2014-%i The Diamond Core Developers</source>
-        <translation>Запазени права (C) 2014-%i Diamond Core разработчиците</translation>
+        <source>Copyright (C) 2014-%i The Bitcloud Core Developers</source>
+        <translation>Запазени права (C) 2014-%i Bitcloud Core разработчиците</translation>
     </message>
     <message>
         <source>Could not parse -rpcbind value %s as network address</source>
@@ -3823,8 +3823,8 @@ for example: alertnotify=echo %%s | mail -s "Diamond Alert" admin@foo.com
         <translation>Грешка при свързване с Masternode.</translation>
     </message>
     <message>
-        <source>Error loading wallet.dat: Wallet requires newer version of Diamond Core</source>
-        <translation>Грешка при зареждане на wallet.dat: портфейлът изисква по-нова версия на Diamond Core</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of Bitcloud Core</source>
+        <translation>Грешка при зареждане на wallet.dat: портфейлът изисква по-нова версия на Bitcloud Core</translation>
     </message>
     <message>
         <source>Error: A fatal internal error occured, see debug.log for details</source>
@@ -3895,8 +3895,8 @@ for example: alertnotify=echo %%s | mail -s "Diamond Alert" admin@foo.com
         <translation>Информация</translation>
     </message>
     <message>
-        <source>Initialization sanity check failed. Diamond Core is shutting down.</source>
-        <translation>Инициализационната проверка не успешна. Diamond ядрото се изключва.</translation>
+        <source>Initialization sanity check failed. Bitcloud Core is shutting down.</source>
+        <translation>Инициализационната проверка не успешна. Bitcloud ядрото се изключва.</translation>
     </message>
     <message>
         <source>Input is not valid.</source>
@@ -4147,8 +4147,8 @@ for example: alertnotify=echo %%s | mail -s "Diamond Alert" admin@foo.com
         <translation>Използвай UPnP за определяне на порта за слушане (по подразбиране: %u)</translation>
     </message>
     <message>
-        <source>Wallet needed to be rewritten: restart Diamond Core to complete</source>
-        <translation>Портфейлът трябва да бъде презаписан: рестартирайте Diamond за да завършите</translation>
+        <source>Wallet needed to be rewritten: restart Bitcloud Core to complete</source>
+        <translation>Портфейлът трябва да бъде презаписан: рестартирайте Bitcloud за да завършите</translation>
     </message>
     <message>
         <source>Warning: Unsupported argument -benchmark ignored, use -debug=bench.</source>
@@ -4208,7 +4208,7 @@ for example: alertnotify=echo %%s | mail -s "Diamond Alert" admin@foo.com
     </message>
     <message>
         <source>Keep N DNET anonymized (default: %u)</source>
-        <translation>Поддържай N Diamond анонимизирани (по подразбиране: %u)</translation>
+        <translation>Поддържай N Bitcloud анонимизирани (по подразбиране: %u)</translation>
     </message>
     <message>
         <source>Keep at most &lt;n&gt; unconnectable transactions in memory (default: %u)</source>

@@ -306,7 +306,7 @@ void AddressTableModel::updateEntry(const QString& address,
     const QString& purpose,
     int status)
 {
-    // Update address book model from Diamond core
+    // Update address book model from Bitcloud core
     priv->updateEntry(address, label, isMine, purpose, status);
 }
 

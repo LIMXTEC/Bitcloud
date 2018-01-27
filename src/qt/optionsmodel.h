@@ -44,7 +44,7 @@ public:
         DatabaseCache,       // int
         SpendZeroConfChange, // bool
         DarksendRounds,   // int
-        AnonymizeDiamondAmount, //int
+        AnonymizeBitcloudAmount, //int
         ShowMasternodesTab,  // bool
         Listen,              // bool
         OptionIDRowCount,
@@ -90,7 +90,7 @@ private:
 signals:
     void displayUnitChanged(int unit);
     void DarksendRoundsChanged(int);
-    void anonymizeDiamondAmountChanged(int);
+    void anonymizeBitcloudAmountChanged(int);
     void coinControlFeaturesChanged(bool);
 };
 

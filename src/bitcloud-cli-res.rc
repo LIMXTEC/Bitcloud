@@ -16,14 +16,14 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "Diamond"
-            VALUE "FileDescription",    "Diamond-cli (OSS RPC client for Diamond)"
+            VALUE "CompanyName",        "Bitcloud"
+            VALUE "FileDescription",    "Bitcloud-cli (OSS RPC client for Bitcloud)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
             VALUE "InternalName",       "bitcloud-cli"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT/X11 software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
             VALUE "OriginalFilename",   "bitcloud-cli.exe"
-            VALUE "ProductName",        "Diamond-cli"
+            VALUE "ProductName",        "Bitcloud-cli"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
     END

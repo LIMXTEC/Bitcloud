@@ -15,7 +15,7 @@
 - (NSString *)__bundleIdentifier
 {
     if (self == [NSBundle mainBundle]) {
-        return @"io.bitcloud.Diamond-Qt";
+        return @"io.bitcloud.Bitcloud-Qt";
     } else {
         return [self __bundleIdentifier];
     }

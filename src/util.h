@@ -37,7 +37,7 @@ extern bool fLiteMode;
 extern bool fEnableInstantX;
 extern int nInstantXDepth;
 extern int nDarksendRounds;
-extern int nAnonymizeDiamondAmount;
+extern int nAnonymizeBitcloudAmount;
 extern int nLiquidityProvider;
 extern bool fEnableDarksend;
 extern int64_t enforceMasternodePaymentsTime;

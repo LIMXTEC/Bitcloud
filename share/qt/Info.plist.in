@@ -17,7 +17,7 @@
   <string>APPL</string>
 
   <key>CFBundleGetInfoString</key>
-  <string>@CLIENT_VERSION_MAJOR@.@CLIENT_VERSION_MINOR@.@CLIENT_VERSION_REVISION@, Copyright © 2009-@COPYRIGHT_YEAR@ The Bitcoin Core developers, 2014-@COPYRIGHT_YEAR@ The Dash and PIVX Core Developers, 2015-@COPYRIGHT_YEAR@ The Diamond Core developers</string>
+  <string>@CLIENT_VERSION_MAJOR@.@CLIENT_VERSION_MINOR@.@CLIENT_VERSION_REVISION@, Copyright © 2009-@COPYRIGHT_YEAR@ The Bitcoin Core developers, 2014-@COPYRIGHT_YEAR@ The Dash and PIVX Core Developers, 2015-@COPYRIGHT_YEAR@ The Bitcloud Core developers</string>
 
   <key>CFBundleShortVersionString</key>
   <string>@CLIENT_VERSION_MAJOR@.@CLIENT_VERSION_MINOR@.@CLIENT_VERSION_REVISION@</string>
@@ -32,7 +32,7 @@
   <string>BTDX-Qt</string>
 
   <key>CFBundleIdentifier</key>
-  <string>io.bitcloud.Diamond-Qt</string>
+  <string>io.bitcloud.Bitcloud-Qt</string>
 
   <key>CFBundleURLTypes</key>
   <array>
@@ -40,7 +40,7 @@
       <key>CFBundleTypeRole</key>
       <string>Editor</string>
       <key>CFBundleURLName</key>
-      <string>io.bitcloud.DiamondPayment</string>
+      <string>io.bitcloud.BitcloudPayment</string>
       <key>CFBundleURLSchemes</key>
       <array>
         <string>bitcloud</string>
@@ -54,7 +54,7 @@
       <key>UTTypeIdentifier</key>
       <string>io.bitcloud.paymentrequest</string>
       <key>UTTypeDescription</key>
-      <string>Diamond payment request</string>
+      <string>Bitcloud payment request</string>
       <key>UTTypeConformsTo</key>
       <array>
         <string>public.data</string>
