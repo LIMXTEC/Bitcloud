@@ -579,7 +579,7 @@ void BitcoinGUI::createToolBars()
         if (settings.value("fShowMasternodesTab").toBool()) {
             toolbar->addAction(masternodeAction);
         }
-		toolbar->addAction(coinmixAction);
+		//toolbar->addAction(coinmixAction);
 		toolbar->addAction(unlockWalletAction);
 		toolbar->addAction(lockWalletAction2);
         toolbar->setMovable(false); // remove unused icon in upper left corner
@@ -666,7 +666,7 @@ void BitcoinGUI::setWalletActionsEnabled(bool enabled)
 {
     overviewAction->setEnabled(enabled);
 	////AAAAA
-	coinmixAction->setEnabled(enabled);
+	//coinmixAction->setEnabled(enabled);
 	unlockWalletAction->setEnabled(enabled);
 	lockWalletAction2->setEnabled(enabled);
 	sendCoinsAction->setEnabled(enabled);
