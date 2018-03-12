@@ -14,7 +14,7 @@ BTDX is a cutting edge cryptocurrency, with many features not available in most 
   technology used to secure the network and provide the above features, each Masternode is secured
   with collateral of 10000 BTDX
 
-More information at http://bit.bitclouds/ Visit our ANN thread at [BitcoinTalk](https://bitcointalk.org/index.php?topic=1604893.0)
+More information at https://bit-cloud.info/ Visit our ANN thread at [BitcoinTalk](https://bitcointalk.org/index.php?topic=2092583.0)
 
 ### Coin Specs
 <table>
