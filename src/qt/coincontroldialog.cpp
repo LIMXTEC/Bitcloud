@@ -136,7 +136,7 @@ CoinControlDialog::CoinControlDialog(QWidget* parent, bool fMultisigEnabled) : Q
     ui->treeWidget->setColumnWidth(COLUMN_AMOUNT, 100);
     ui->treeWidget->setColumnWidth(COLUMN_LABEL, 170);
     ui->treeWidget->setColumnWidth(COLUMN_ADDRESS, 190);
-    ui->treeWidget->setColumnWidth(COLUMN_DARKSEND_ROUNDS, 88);
+ //  ui->treeWidget->setColumnWidth(COLUMN_DARKSEND_ROUNDS, 88);
     ui->treeWidget->setColumnWidth(COLUMN_DATE, 80);
     ui->treeWidget->setColumnWidth(COLUMN_CONFIRMATIONS, 100);
     ui->treeWidget->setColumnWidth(COLUMN_PRIORITY, 100);
@@ -438,9 +438,9 @@ void CoinControlDialog::viewItemChanged(QTreeWidgetItem* item, int column)
             coinControl->UnSelect(outpt);
         else if (item->isDisabled()) // locked (this happens if "check all" through parent node)
             item->setCheckState(COLUMN_CHECKBOX, Qt::Unchecked);
-        else {
+        else 
             coinControl->Select(outpt);
-            CTxIn vin(outpt);
+     /*       CTxIn vin(outpt);
             int rounds = pwalletMain->GetInputDarksendRounds(vin);
             if (coinControl->useDarKsend && rounds < nDarksendRounds) {
                 QMessageBox::warning(this, windowTitle(),
@@ -448,7 +448,7 @@ void CoinControlDialog::viewItemChanged(QTreeWidgetItem* item, int column)
                     QMessageBox::Ok, QMessageBox::Ok);
                 coinControl->useDarKsend = false;
             }
-        }
+        }*/
 
         // selection changed -> update labels
         if (ui->treeWidget->isEnabled()){ // do not update on every click for (un)select all
@@ -645,10 +645,10 @@ void CoinControlDialog::updateLabels(WalletModel* model, QDialog* dialog)
             nChange = nAmount - nPayFee - nPayAmount;
 
             // DS Fee = overpay
-            if (coinControl->useDarKsend && nChange > 0) {
+       /*     if (coinControl->useDarKsend && nChange > 0) {
                 nPayFee += nChange;
                 nChange = 0;
-            }
+            }*/
             // Never create dust outputs; if we would, just add the dust to the fee.
             if (nChange > 0 && nChange < CENT) {
                 CTxOut txout(nChange, (CScript)vector<unsigned char>(24, 0));
@@ -869,6 +869,7 @@ void CoinControlDialog::updateView()
 
 
             // ds+ rounds
+			/*
             CTxIn vin = CTxIn(out.tx->GetHash(), out.i);
             int rounds = pwalletMain->GetInputDarksendRounds(vin);
 
@@ -876,7 +877,7 @@ void CoinControlDialog::updateView()
                 itemOutput->setText(COLUMN_DARKSEND_ROUNDS, strPad(QString::number(rounds), 11, " "));
             else
                 itemOutput->setText(COLUMN_DARKSEND_ROUNDS, strPad(QString(tr("n/a")), 11, " "));
-
+*/
 
             // confirmations
             itemOutput->setText(COLUMN_CONFIRMATIONS, strPad(QString::number(out.nDepth), 8, " "));
