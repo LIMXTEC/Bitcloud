@@ -794,44 +794,37 @@ CAmount CBudgetManager::GetTotalBudget(int nHeight)
         CAmount nSubsidy = 500 * COIN;
         return ((nSubsidy / 100) * 10) * 146;
     }
-	return 0;
-
-	/*
+	
     //get block value and calculate from that
     CAmount nSubsidy = 0;
-    if (nHeight <= Params().LAST_POW_BLOCK() && nHeight >= 151200) {
-        nSubsidy = 50 * COIN;
-    } else if (nHeight <= 302399 && nHeight > Params().LAST_POW_BLOCK()) {
-        nSubsidy = 50 * COIN;
-    } else if (nHeight <= 345599 && nHeight >= 302400) {
-        nSubsidy = 45 * COIN;
-    } else if (nHeight <= 388799 && nHeight >= 345600) {
-        nSubsidy = 40 * COIN;
-    } else if (nHeight <= 431999 && nHeight >= 388800) {
-        nSubsidy = 35 * COIN;
-    } else if (nHeight <= 475199 && nHeight >= 432000) {
-        nSubsidy = 30 * COIN;
-    } else if (nHeight <= 518399 && nHeight >= 475200) {
-        nSubsidy = 25 * COIN;
-    } else if (nHeight <= 561599 && nHeight >= 518400) {
-        nSubsidy = 20 * COIN;
-    } else if (nHeight <= 604799 && nHeight >= 561600) {
-        nSubsidy = 15 * COIN;
-    } else if (nHeight <= 647999 && nHeight >= 604800) {
-        nSubsidy = 10 * COIN;
-    } else if (nHeight >= 648000) {
-        nSubsidy = 5 * COIN;
+    if (nHeight >= 82500 && nHeight <= 157680) {
+        nSubsidy = 7.5 * COIN;
+    } else if (nHeight >= 157681 && nHeight <= 236520) {
+        nSubsidy = 3.7 * COIN;
+    } else if (nHeight >= 236521 && nHeight <= 315360) {
+        nSubsidy = 3.4 * COIN;
+    } else if (nHeight >= 315361 && nHeight <= 394200) {
+        nSubsidy = 3 * COIN;
+    } else if (nHeight >= 394201 && nHeight <= 473040) {
+        nSubsidy = 2.4 * COIN;
+    } else if (nHeight >= 473041 && nHeight <= 551880) {
+        nSubsidy = 1.8 * COIN;
+    } else if (nHeight >= 551881 && nHeight <= 630720) {
+        nSubsidy = 1.2 * COIN;
+    } else if (nHeight >= 630721 && nHeight <= 709560) {
+        nSubsidy = 0.7 * COIN;
+    } else if (nHeight >= 709561 && nHeight <= 788400) {
+        nSubsidy = 0.4 * COIN;
+    } else if (nHeight >= 788400) {
+        nSubsidy = 0.4 * COIN;
     } else {
         nSubsidy = 0 * COIN;
     }
 
     // Amount of blocks in a months period of time (using 1 minutes per) = (60*24*30)
-    if (nHeight <= 172800) {
-        return 648000 * COIN;
-    } else {
-        return ((nSubsidy / 100) * 10) * 1440 * 30;
-    }
-	*/
+    // retun Amount/100 *10* Blocks per day * day
+	//1440 (Basesource)
+        return ((nSubsidy / 100) * 10) * 288 * 30;
 }
 
 void CBudgetManager::NewBlock()
@@ -846,12 +839,13 @@ void CBudgetManager::NewBlock()
     }
 
     //this function should be called 1/14 blocks, allowing up to 100 votes per day on all proposals
-    if (chainActive.Height() % 14 != 0) return;
+	// Bitcloud Reducs to 2 (122 Votes per Day)
+    if (chainActive.Height() % 2 != 0) return;
 
     // incremental sync with our peers
     if (masternodeSync.IsSynced()) {
         LogPrintf("CBudgetManager::NewBlock - incremental sync started\n");
-        if (chainActive.Height() % 1440 == rand() % 1440) {
+        if (chainActive.Height() % 288 == rand() % 288) {
             ClearSeen();
             ResetSync();
         }
