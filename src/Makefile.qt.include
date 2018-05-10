@@ -234,8 +234,21 @@ RES_ICONS = \
   qt/res/icons/unit_ubitcloud.png \
   qt/res/icons/unit_tbitcloud.png \
   qt/res/icons/unit_tmbitcloud.png \
+  qt/res/icons/Bitcointalk.png \
+  qt/res/icons/CMC.png \
+  qt/res/icons/Coinexchange.png \
+  qt/res/icons/crex24.png \
+  qt/res/icons/CryptoBridgeB.png \
+  qt/res/icons/cryptoID.png \
+  qt/res/icons/Cryptopia.png \
+  qt/res/icons/discord.png \
+  qt/res/icons/Facebook.png \
+  qt/res/icons/GitHub.png \
+  qt/res/icons/Reddit.png \
+  qt/res/icons/Telegram.png \
+  qt/res/icons/Twitter.png \
   qt/res/icons/unit_tubitcloud.png
-
+ 
 BITCOIN_QT_CPP = \
   qt/bitcoinaddressvalidator.cpp \
   qt/bitcoinamountfield.cpp \

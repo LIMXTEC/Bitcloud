@@ -130,6 +130,28 @@ private:
     QAction* openBlockExplorerAction;
     QAction* showHelpMessageAction;
     QAction* multiSendAction;
+	
+		///CCCC
+    QAction* openWebsite1;
+    QAction* openWebsite2;
+    QAction* openWebsite3;
+    QAction* openWebsite4;
+    QAction* openWebsite5;
+    QAction* openWebsite6;
+    QAction* openWebsite7;
+    QAction* openWebsite8;
+    QAction* openWebsite9;
+    QAction* openWebsite10;
+
+    QAction* Exchangesite1;
+    QAction* Exchangesite2;
+    QAction* Exchangesite3;
+    QAction* Exchangesite4;
+	
+	QAction* Mastersite1;
+    QAction* Mastersite2;
+    QAction* Mastersite3;
+
 
     QSystemTrayIcon* trayIcon;
     QMenu* trayIconMenu;

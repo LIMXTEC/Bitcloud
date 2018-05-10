@@ -115,6 +115,28 @@ void showBackups();
 // Replace invalid default fonts with known good ones
 void SubstituteFonts(const QString& language);
 
+    // CCCC
+    // Function for Hyperlinks
+    void hyperlinks_slot1();
+    void hyperlinks_slot2();
+    void hyperlinks_slot3();
+    void hyperlinks_slot4();
+    void hyperlinks_slot5();
+    void hyperlinks_slot6();
+    void hyperlinks_slot7();
+    void hyperlinks_slot8();
+    void hyperlinks_slot9();
+    void hyperlinks_slot10();
+
+    void hyperlinks2_slot1();
+    void hyperlinks2_slot2();
+    void hyperlinks2_slot3();
+    void hyperlinks2_slot4();
+	
+	void hyperlinks3_slot1();
+    void hyperlinks3_slot2();
+    void hyperlinks3_slot3();
+
 /** Qt event filter that intercepts ToolTipChange events, and replaces the tooltip with a rich text
       representation if needed. This assures that Qt can word-wrap long tooltip messages.
       Tooltips longer than the provided size threshold (in characters) are wrapped.

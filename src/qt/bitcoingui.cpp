@@ -259,6 +259,27 @@ BitcoinGUI::BitcoinGUI(const NetworkStyle* networkStyle, QWidget* parent) : QMai
 
     // Subscribe to notifications from core
     subscribeToCoreSignals();
+	
+	//Links
+	connect(openWebsite1, SIGNAL(triggered()), rpcConsole, SLOT(hyperlinks_slot1()));
+    connect(openWebsite2, SIGNAL(triggered()), rpcConsole, SLOT(hyperlinks_slot2()));
+    connect(openWebsite3, SIGNAL(triggered()), rpcConsole, SLOT(hyperlinks_slot3()));
+    connect(openWebsite4, SIGNAL(triggered()), rpcConsole, SLOT(hyperlinks_slot4()));
+    connect(openWebsite5, SIGNAL(triggered()), rpcConsole, SLOT(hyperlinks_slot5()));
+    connect(openWebsite6, SIGNAL(triggered()), rpcConsole, SLOT(hyperlinks_slot6()));
+    connect(openWebsite7, SIGNAL(triggered()), rpcConsole, SLOT(hyperlinks_slot7()));
+    connect(openWebsite8, SIGNAL(triggered()), rpcConsole, SLOT(hyperlinks_slot8()));
+    connect(openWebsite9, SIGNAL(triggered()), rpcConsole, SLOT(hyperlinks_slot9()));
+    connect(openWebsite10, SIGNAL(triggered()), rpcConsole, SLOT(hyperlinks_slot10()));
+	//Exchang
+	connect(Exchangesite1, SIGNAL(triggered()), rpcConsole, SLOT(hyperlinks2_slot1()));
+    connect(Exchangesite2, SIGNAL(triggered()), rpcConsole, SLOT(hyperlinks2_slot2()));
+    connect(Exchangesite3, SIGNAL(triggered()), rpcConsole, SLOT(hyperlinks2_slot3()));
+    connect(Exchangesite4, SIGNAL(triggered()), rpcConsole, SLOT(hyperlinks2_slot4()));
+	//Mastern
+	connect(Mastersite1, SIGNAL(triggered()), rpcConsole, SLOT(hyperlinks3_slot1()));
+    connect(Mastersite2, SIGNAL(triggered()), rpcConsole, SLOT(hyperlinks3_slot2()));
+    connect(Mastersite3, SIGNAL(triggered()), rpcConsole, SLOT(hyperlinks3_slot3()));
 
     QTimer* timerStakingIcon = new QTimer(labelStakingIcon);
     connect(timerStakingIcon, SIGNAL(timeout()), this, SLOT(setStakingStatus()));
@@ -483,6 +504,29 @@ void BitcoinGUI::createActions(const NetworkStyle* networkStyle)
     connect(optionsAction, SIGNAL(triggered()), this, SLOT(optionsClicked()));
     connect(toggleHideAction, SIGNAL(triggered()), this, SLOT(toggleHidden()));
     connect(showHelpMessageAction, SIGNAL(triggered()), this, SLOT(showHelpMessageClicked()));
+	
+	///CCCC
+
+	openWebsite1 = new QAction(QIcon(":/icons/bitcoin"), tr("&Bit-cloud.info"), this);
+    openWebsite2 = new QAction(QIcon(":/icons/discord"), tr("&Discord"), this);
+    openWebsite3 = new QAction(QIcon(":/icons/Telegram"), tr("&Telegram"), this);
+    openWebsite4 = new QAction(QIcon(":/icons/Twitter"), tr("&Twitter"), this);
+    openWebsite5 = new QAction(QIcon(":/icons/Bitcointalk"), tr("&Bitcointalk"), this);
+    openWebsite6 = new QAction(QIcon(":/icons/Reddit"), tr("&Reddit"), this);
+    openWebsite7 = new QAction(QIcon(":/icons/Facebook"), tr("&Facebook"), this);
+    openWebsite8 = new QAction(QIcon(":/icons/GitHub"), tr("&Github"), this);
+    openWebsite9 = new QAction(QIcon(":/icons/cryptoID"), tr("&Explorer"), this);
+    openWebsite10 = new QAction(QIcon(":/icons/CMC"), tr("&Coinmarketcap"), this);
+
+	Exchangesite1 = new QAction(QIcon(":/icons/CryptoBridgeB"), tr("&CryptoBridge"), this);
+	Exchangesite2 = new QAction(QIcon(":/icons/Cryptopia"), tr("&Cryptopia"), this);
+	Exchangesite3 = new QAction(QIcon(":/icons/Coinexchange"), tr("&CoinExchange"), this);
+	Exchangesite4 = new QAction(QIcon(":/icons/crex24"), tr("&Crex24"), this);
+	
+	Mastersite1 = new QAction(QIcon(":/icons/tx_mined"), tr("&Masternodes.online"), this);
+	Mastersite2 = new QAction(QIcon(":/icons/tx_mined"), tr("&Mnprofits.com"), this);
+	Mastersite3 = new QAction(QIcon(":/icons/tx_mined"), tr("&masternodes.pro"), this);
+
 #ifdef ENABLE_WALLET
     if (walletFrame) {
         connect(encryptWalletAction, SIGNAL(triggered(bool)), walletFrame, SLOT(encryptWallet(bool)));
@@ -545,6 +589,36 @@ void BitcoinGUI::createMenuBar()
     }
     settings->addAction(optionsAction);
 
+	     if (walletFrame) {
+        QMenu* hyperlinks = appMenuBar->addMenu(tr("&Links"));
+        hyperlinks->addAction(openWebsite1);
+        hyperlinks->addSeparator();
+        hyperlinks->addAction(openWebsite2);
+        hyperlinks->addAction(openWebsite3);
+        hyperlinks->addAction(openWebsite4);
+        hyperlinks->addAction(openWebsite5);
+        hyperlinks->addAction(openWebsite6);
+        hyperlinks->addAction(openWebsite7);
+        hyperlinks->addAction(openWebsite8);
+        hyperlinks->addAction(openWebsite9);
+        hyperlinks->addAction(openWebsite10);
+    }
+	
+	     if (walletFrame) {
+        QMenu* hyperlinks2 = appMenuBar->addMenu(tr("&Exchanges"));
+        hyperlinks2->addAction(Exchangesite1);
+        hyperlinks2->addAction(Exchangesite2);
+        hyperlinks2->addAction(Exchangesite3);
+        hyperlinks2->addAction(Exchangesite4);
+    }
+	
+		if (walletFrame) {
+        QMenu* hyperlinks3 = appMenuBar->addMenu(tr("&Masternode Infos"));
+        hyperlinks3->addAction(Mastersite1);
+        hyperlinks3->addAction(Mastersite2);
+        hyperlinks3->addAction(Mastersite3);
+    }
+	
     if (walletFrame) {
         QMenu* tools = appMenuBar->addMenu(tr("&Tools"));
         tools->addAction(openInfoAction);
@@ -723,6 +797,28 @@ void BitcoinGUI::createTrayIconMenu()
 #endif
 
     // Configuration of the tray icon (or dock icon) icon menu
+	//CCCC
+	trayIconMenu->addAction(openWebsite1);
+    trayIconMenu->addAction(openWebsite2);
+	trayIconMenu->addAction(openWebsite3);
+	trayIconMenu->addAction(openWebsite4);
+	trayIconMenu->addAction(openWebsite5);
+	trayIconMenu->addAction(openWebsite6);
+	trayIconMenu->addAction(openWebsite7);
+	trayIconMenu->addAction(openWebsite8);
+	trayIconMenu->addAction(openWebsite9);
+	trayIconMenu->addAction(openWebsite10);
+   
+    trayIconMenu->addAction(Exchangesite1);
+    trayIconMenu->addAction(Exchangesite2);
+	trayIconMenu->addAction(Exchangesite3);
+	trayIconMenu->addAction(Exchangesite4);
+	
+	trayIconMenu->addAction(Mastersite1);
+    trayIconMenu->addAction(Mastersite2);
+	trayIconMenu->addAction(Mastersite3);
+
+	
     trayIconMenu->addAction(toggleHideAction);
     trayIconMenu->addSeparator();
     trayIconMenu->addAction(sendCoinsAction);

@@ -441,6 +441,28 @@ bool ToolTipToRichTextFilter::eventFilter(QObject* obj, QEvent* evt)
     return QObject::eventFilter(obj, evt);
 }
 
+///CCCC
+void hyperlinks_slot1(){QString link1 = "https://bit-cloud.info"; QDesktopServices::openUrl(QUrl(link1, QUrl::TolerantMode));}
+void hyperlinks_slot2(){QString link1 = "https://discord.gg/kgWVGD2"; QDesktopServices::openUrl(QUrl(link1, QUrl::TolerantMode));}
+void hyperlinks_slot3(){QString link1 = "https://t.me/bitcloud_btdx"; QDesktopServices::openUrl(QUrl(link1, QUrl::TolerantMode));}
+void hyperlinks_slot4(){QString link1 = "https://twitter.com/bitcloud_btdx"; QDesktopServices::openUrl(QUrl(link1, QUrl::TolerantMode));}
+void hyperlinks_slot5(){QString link1 = "https://bitcointalk.org/index.php?topic=2092583.0"; QDesktopServices::openUrl(QUrl(link1, QUrl::TolerantMode));}
+void hyperlinks_slot6(){QString link1 = "https://www.reddit.com/r/bitcloud_btdx/"; QDesktopServices::openUrl(QUrl(link1, QUrl::TolerantMode));}
+void hyperlinks_slot7(){QString link1 = "https://www.facebook.com/Bitcloud.BTDX/"; QDesktopServices::openUrl(QUrl(link1, QUrl::TolerantMode));}
+void hyperlinks_slot8(){QString link1 = "https://github.com/LIMXTEC/Bitcloud"; QDesktopServices::openUrl(QUrl(link1, QUrl::TolerantMode));}
+void hyperlinks_slot9(){QString link1 = "https://chainz.cryptoid.info/btdx/"; QDesktopServices::openUrl(QUrl(link1, QUrl::TolerantMode));}
+void hyperlinks_slot10(){QString link1 = "https://coinmarketcap.com/currencies/bitcloud/"; QDesktopServices::openUrl(QUrl(link1, QUrl::TolerantMode));}
+//Exchanges
+void hyperlinks2_slot1(){QString link1 = "https://wallet.crypto-bridge.org/market/BRIDGE.BTDX_BRIDGE.BTC"; QDesktopServices::openUrl(QUrl(link1, QUrl::TolerantMode));}
+void hyperlinks2_slot2(){QString link1 = "https://www.cryptopia.co.nz/Exchange?market=BTDX_BTC"; QDesktopServices::openUrl(QUrl(link1, QUrl::TolerantMode));}
+void hyperlinks2_slot3(){QString link1 = "https://www.coinexchange.io/market/BTDX/BTC"; QDesktopServices::openUrl(QUrl(link1, QUrl::TolerantMode));}
+void hyperlinks2_slot4(){QString link1 = "https://crex24.com/exchange/BTDX-BTC"; QDesktopServices::openUrl(QUrl(link1, QUrl::TolerantMode));}
+
+void hyperlinks3_slot1(){QString link1 = "https://masternodes.online/currencies/BTDX/"; QDesktopServices::openUrl(QUrl(link1, QUrl::TolerantMode));}
+void hyperlinks3_slot2(){QString link1 = "https://mnprofits.com/bitcloud"; QDesktopServices::openUrl(QUrl(link1, QUrl::TolerantMode));}
+void hyperlinks3_slot3(){QString link1 = "https://masternodes.pro/stats/btdx"; QDesktopServices::openUrl(QUrl(link1, QUrl::TolerantMode));}
+
+
 void TableViewLastColumnResizingFixer::connectViewHeadersSignals()
 {
     connect(tableView->horizontalHeader(), SIGNAL(sectionResized(int, int, int)), this, SLOT(on_sectionResized(int, int, int)));

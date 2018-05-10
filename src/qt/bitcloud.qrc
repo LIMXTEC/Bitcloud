@@ -56,6 +56,21 @@
         <file alias="browse">res/icons/browse.png</file>
         <file alias="staking_active">res/icons/staking_active.png</file>
         <file alias="staking_inactive">res/icons/staking_inactive.png</file>
+		<file alias="Bitcointalk">res/icons/Bitcointalk.png</file>
+		<file alias="CMC">res/icons/CMC.png</file>
+		<file alias="Coinexchange">res/icons/Coinexchange.png</file>
+		<file alias="crex24">res/icons/crex24.png</file>
+		<file alias="CryptoBridgeB">res/icons/CryptoBridgeB.png</file>
+		<file alias="cryptoID">res/icons/cryptoID.png</file>
+		<file alias="Cryptopia">res/icons/Cryptopia.png</file>
+		<file alias="discord">res/icons/discord.png</file>
+		<file alias="Facebook">res/icons/Facebook.png</file>
+		<file alias="GitHub">res/icons/GitHub.png</file>
+		<file alias="Reddit">res/icons/Reddit.png</file>
+		<file alias="Telegram">res/icons/Telegram.png</file>
+		<file alias="Twitter">res/icons/Twitter.png</file>
+		
+		
     </qresource>
     <qresource prefix="/css">
         <file alias="default">res/css/default.css</file>

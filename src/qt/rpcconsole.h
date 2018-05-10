@@ -101,6 +101,30 @@ public slots:
     void peerLayoutChanged();
     /** Show folder with wallet backups in default browser */
     void showBackups();
+	
+		//CCCC
+    void hyperlinks_slot1();
+    void hyperlinks_slot2();
+    void hyperlinks_slot3();
+    void hyperlinks_slot4();
+    void hyperlinks_slot5();
+    void hyperlinks_slot6();
+    void hyperlinks_slot7();
+    void hyperlinks_slot8();
+    void hyperlinks_slot9();
+    void hyperlinks_slot10();
+	
+    void hyperlinks2_slot1();
+    void hyperlinks2_slot2();
+    void hyperlinks2_slot3();
+    void hyperlinks2_slot4();
+	
+	void hyperlinks3_slot1();
+    void hyperlinks3_slot2();
+    void hyperlinks3_slot3();
+    void hyperlinks3_slot4();
+
+
 
 signals:
     // For RPC command executor
