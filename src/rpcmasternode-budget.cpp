@@ -14,7 +14,8 @@
 #include "masternodeman.h"
 #include "rpcserver.h"
 #include "utilmoneystr.h"
-
+#include <string>
+#include <iostream>
 #include <fstream>
 using namespace json_spirit;
 using namespace std;
@@ -66,9 +67,17 @@ Value mnbudget(const Array& params, bool fHelp)
         if (strURL.size() > 64)
             return "Invalid url, limit of 64 characters.";
 
+        std::string nPaymenttext = params[3].get_str();
+        int nPaymentCount = std::stoi(nPaymenttext);
+        //LogPrintf("nPaymentCount %d",nPaymentCount);
+        if (nPaymentCount < 1 || nPaymentCount > 12)
+            return "Invalid payment count, must be more than zero or few than 13";
+        /*
+        This part works not. 
         int nPaymentCount = params[3].get_int();
         if (nPaymentCount < 1)
             return "Invalid payment count, must be more than zero.";
+        */
 
         //set block min
         if (pindexPrev != NULL) nBlockMin = pindexPrev->nHeight - GetBudgetPaymentCycleBlocks() * (nPaymentCount + 1);
@@ -142,9 +151,18 @@ Value mnbudget(const Array& params, bool fHelp)
         if (strURL.size() > 64)
             return "Invalid url, limit of 64 characters.";
 
+        std::string nPaymenttext = params[3].get_str();
+        int nPaymentCount = std::stoi(nPaymenttext);
+        //LogPrintf("nPaymentCount %d",nPaymentCount);
+        if (nPaymentCount < 1 || nPaymentCount > 12)
+        return "Invalid payment count, must be more than zero or few than 13";
+       
+        /*
+        This part works not. 
         int nPaymentCount = params[3].get_int();
         if (nPaymentCount < 1)
-            return "Invalid payment count, must be more than zero.";
+             return "Invalid payment count, must be more than zero.";
+        */
 
         //set block min
         if (pindexPrev != NULL) nBlockMin = pindexPrev->nHeight - GetBudgetPaymentCycleBlocks() * (nPaymentCount + 1);
