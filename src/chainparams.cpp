@@ -191,8 +191,9 @@ genesis hash: 000002d56463941c20eae5cb474cc805b646515d18bc7dc222a0885b206eadb0
         assert(hashGenesisBlock == uint256("0x000002d56463941c20eae5cb474cc805b646515d18bc7dc222a0885b206eadb0"));
         assert(genesis.hashMerkleRoot == uint256("0x68f38e0fb1ea4346fa70aee7799c5f952293644e9ffdeccac41173e1e10e07cb"));
 
-		vSeeds.push_back(CDNSSeedData("188.68.52.172", "188.68.52.172"));
-		vSeeds.push_back(CDNSSeedData("37.120.186.85", "37.120.186.85"));
+        vSeeds.push_back(CDNSSeedData("seed.bitcloud.network", "seed.bitcloud.network"));
+        vSeeds.push_back(CDNSSeedData("188.68.52.172", "188.68.52.172"));
+        vSeeds.push_back(CDNSSeedData("37.120.186.85", "37.120.186.85"));
         vSeeds.push_back(CDNSSeedData("37.120.190.76", "37.120.190.76"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 25);
@@ -276,7 +277,6 @@ public:
 
         vFixedSeeds.clear();
         vSeeds.clear();
-        vSeeds.push_back(CDNSSeedData("seed.bitcloud.network", "seed.bitcloud.network"));
         vSeeds.push_back(CDNSSeedData("188.68.52.172", "188.68.52.172"));
         vSeeds.push_back(CDNSSeedData("37.120.186.85", "37.120.186.85"));
         vSeeds.push_back(CDNSSeedData("37.120.190.76", "37.120.190.76"));
