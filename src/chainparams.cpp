@@ -265,6 +265,7 @@ public:
 
 		vFixedSeeds.clear();
 		vSeeds.clear();
+		vSeeds.push_back(CDNSSeedData("seed.bitcloud.network", "seed.bitcloud.network"));
 		vSeeds.push_back(CDNSSeedData("188.68.52.172", "188.68.52.172"));
 		vSeeds.push_back(CDNSSeedData("37.120.186.85", "37.120.186.85"));
 		vSeeds.push_back(CDNSSeedData("37.120.190.76", "37.120.190.76"));
