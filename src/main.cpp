@@ -3481,7 +3481,7 @@ bool ProcessNewBlock(CValidationState& state, CNode* pfrom, CBlock* pblock, CDis
     // Preliminary checks
     int64_t nStartTime = GetTimeMillis();
     bool checked = CheckBlock(*pblock, state);
-    LogPrintf("%s : size=%d\n", __func__, pblock->GetSerializeSize(SER_DISK, CLIENT_VERSION));
+    //LogPrintf("%s : size=%d\n", __func__, pblock->GetSerializeSize(SER_DISK, CLIENT_VERSION));
 
  
     // ppcoin: check proof-of-stake
@@ -3548,7 +3548,7 @@ bool ProcessNewBlock(CValidationState& state, CNode* pfrom, CBlock* pblock, CDis
             pwalletMain->AutoCombineDust();
     }
 
-    LogPrintf("%s : ACCEPTED in %ld milliseconds\n", __func__, GetTimeMillis() - nStartTime);
+    //LogPrintf("%s : ACCEPTED in %ld milliseconds\n", __func__, GetTimeMillis() - nStartTime);
 
     return true;
 }
