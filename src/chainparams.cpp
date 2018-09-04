@@ -47,26 +47,25 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
     }
 }
 
-//   What makes a good checkpoint block?
-// + Is surrounded by blocks with reasonable timestamps
-//   (no blocks before with a timestamp after, none after with
-//    timestamp before)
-// + Contains no strange transactions
-/*
 static Checkpoints::MapCheckpoints mapCheckpoints =
-    boost::assign::map_list_of(259201, uint256("1c9121bf9329a6234bfd1ea2d91515f19cd96990725265253f4b164283ade5dd"))
-    (424998, uint256("f31e381eedb0ed3ed65fcc98cc71f36012bee32e8efd017c4f9fb0620fd35f6b"))
-    (616764, uint256("29dd0bd1c59484f290896687b4ffb6a49afa5c498caf61967c69a541f8191557")) //first block to use modifierV2
-    (623933, uint256("c7aafa648a0f1450157dc93bd4d7448913a85b7448f803b4ab970d91fc2a7da7"));
-*/
-static Checkpoints::MapCheckpoints mapCheckpoints =
-    boost::assign::map_list_of(0, uint256("0x001"));
+    boost::assign::map_list_of(0, uint256("0x000002d56463941c20eae5cb474cc805b646515d18bc7dc222a0885b206eadb0"))
+    (300, uint256("0x00000b5361a581aa6bae68175c4c4599e844ef935e95d37af55542e0f635f28c")) // last PoW Block
+    (1000, uint256("0x2a0dd7730224a2c3b3a25d1772c23aa4cb42dc2dffa395d143e55e9a9a2afc06"))
+    (5000, uint256("0x3fbcc4902368fb0628268b1198f5b9d0246fa907384d4f897d06b11150dd4313"))
+    (10000, uint256("0xfd54eb8669e674842c5298fe0e54312034d7ba7235c48afe37150058e8fc40c2"))
+    (25000, uint256("0xccd1dce5db2954dfb2b35f4569038e4a1dcf1af3df3e5997bb451e6718ba8354"))
+    (50000, uint256("0x3b790274950f1d34b34fe7afb404ed57bfe01048ae7ffb4955803d3711110999"))
+    (75000, uint256("0xeccff76714cb4c8fb711b80abceb4d2dae67d14afb256ba7eeb1e6b719f459d9"))
+    (82499, uint256("0x812232aa0007f1e2a5f03aa4738ecc7cb6e0a60a8bf83e9a3a7c8ac78ede46d2"))
+    (82500, uint256("0x855b1b87bfc850560126dbc3a4e10bc3e6b38b2a99e49cdc95a86fa570871256"))
+    (100000, uint256("0x4789e3f2559025345c2d5e819b97b236605fb2da2ecd917a00cb79d71ee075b2"))
+    (108000, uint256("0x4d5d78d85b007599426fca0522279c31770fe7178e8b453526425b97c4878e43"));
 
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-    1493667067, // * UNIX timestamp of last checkpoint block
-    1157185,    // * total number of transactions between genesis and last checkpoint
-                //   (the tx=... number in the SetBestChain debug.log lines)
+    1535830674, // * UNIX timestamp of last checkpoint block
+    291584,     // * total number of transactions between genesis and last checkpoint
+                //  (the tx=... number in the SetBestChain debug.log lines)
     2000        // * estimated number of transactions per day after checkpoint
 };
 
@@ -277,8 +276,9 @@ public:
 
         vFixedSeeds.clear();
         vSeeds.clear();
-		vSeeds.push_back(CDNSSeedData("188.68.52.172", "188.68.52.172"));
-		vSeeds.push_back(CDNSSeedData("37.120.186.85", "37.120.186.85"));
+        vSeeds.push_back(CDNSSeedData("seed.bitcloud.network", "seed.bitcloud.network"));
+        vSeeds.push_back(CDNSSeedData("188.68.52.172", "188.68.52.172"));
+        vSeeds.push_back(CDNSSeedData("37.120.186.85", "37.120.186.85"));
         vSeeds.push_back(CDNSSeedData("37.120.190.76", "37.120.190.76"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 139); // Testnet bitcloud addresses start with 'x' or 'y'
