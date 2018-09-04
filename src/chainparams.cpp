@@ -157,9 +157,9 @@ printf("genesis.hashMerkleRoot = %s \n", genesis.hashMerkleRoot.ToString().c_str
          *     CTxIn(COutPoint(000000, -1), coinbase 04ffff001d01044c5957697265642030392f4a616e2f3230313420546865204772616e64204578706572696d656e7420476f6573204c6976653a204f76657273746f636b2e636f6d204973204e6f7720416363657074696e6720426974636f696e73)
          *     CTxOut(nValue=50.00000000, scriptPubKey=0xA9037BAC7050C479B121CF)
          *   vMerkleTree: e0028e
-		 //Testblock
-		 python genesis.py -a quark -z "The times 31.08.2016 Bitcloud was founded - Designed Team Bitsend" -t 1502817296 -v 0
-		 Z:\VMS\Gen\genquark>python genesis.py -a quark -z "The times 31.08.2016 Bitcloud was founded - Designed Team Bitsend" -t 1502817296 -v 0
+         //Testblock
+         python genesis.py -a quark -z "The times 31.08.2016 Bitcloud was founded - Designed Team Bitsend" -t 1502817296 -v 0
+         Z:\VMS\Gen\genquark>python genesis.py -a quark -z "The times 31.08.2016 Bitcloud was founded - Designed Team Bitsend" -t 1502817296 -v 0
 04ffff001d0104415468652074696d65732033312e30382e3230313620426974636c6f75642077617320666f756e646564202d2044657369676e6564205465616d2042697473656e64
 algorithm: quark
 merkle hash: 68f38e0fb1ea4346fa70aee7799c5f952293644e9ffdeccac41173e1e10e07cb
@@ -216,7 +216,7 @@ genesis hash: 000002d56463941c20eae5cb474cc805b646515d18bc7dc222a0885b206eadb0
         fTestnetToBeDeprecatedFieldRPC = false;
         fHeadersFirstSyncingActive = false;
 
-		/*
+        /*
         fRequireRPCPassword = true;
         fMiningRequiresPeers = true;
         fAllowMinDifficultyBlocks = true;
@@ -224,7 +224,7 @@ genesis hash: 000002d56463941c20eae5cb474cc805b646515d18bc7dc222a0885b206eadb0
         fRequireStandard = false;
         fMineBlocksOnDemand = false;
         fTestnetToBeDeprecatedFieldRPC = true;
-		*/
+        */
 
         nPoolMaxTransactions = 3;
         strSporkKey = "04DA111581AB2E25EB1F0AD98E0CC168EDE663C6282B0FF7C20B33D205E9F0F8A1B4905CC81B2003D2AFA360BE9A317CD130B4530EABDB182FDC50202E28F28659";
