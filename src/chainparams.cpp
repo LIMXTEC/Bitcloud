@@ -207,9 +207,9 @@ genesis hash: 000002d56463941c20eae5cb474cc805b646515d18bc7dc222a0885b206eadb0
 
         fRequireRPCPassword = true;
         fMiningRequiresPeers = true; //true
-        fAllowMinDifficultyBlocks = true; //true
+        fAllowMinDifficultyBlocks = false; //true
         fDefaultConsistencyChecks = false;
-        fRequireStandard = false; // true
+        fRequireStandard = true; // true
         fMineBlocksOnDemand = false; //false
         fSkipProofOfWorkCheck = false;
         fTestnetToBeDeprecatedFieldRPC = false;
