@@ -588,7 +588,7 @@ int CMasternodeMan::GetMasternodeRank(const CTxIn& vin, int64_t nBlockHeight, in
         if (IsSporkActive(SPORK_8_MASTERNODE_PAYMENT_ENFORCEMENT)) {
             nMasternode_Age = mn.lastPing.sigTime - mn.sigTime;
             if ((nMasternode_Age) < nMasternode_Min_Age) {
-                LogPrintf("Skipping just activated Masternode. Age: %ld\n", nMasternode_Age);
+                //LogPrintf("Skipping just activated Masternode. Age: %ld\n", nMasternode_Age);
                 continue;                                                   // Skip masternodes younger than (default) 1 hour
             }
 }
