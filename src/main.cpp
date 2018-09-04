@@ -3479,7 +3479,7 @@ void CBlockIndex::BuildSkip()
 bool ProcessNewBlock(CValidationState& state, CNode* pfrom, CBlock* pblock, CDiskBlockPos* dbp)
 {
     // Preliminary checks
-    int64_t nStartTime = GetTimeMillis();
+    //int64_t nStartTime = GetTimeMillis();
     bool checked = CheckBlock(*pblock, state);
     //LogPrintf("%s : size=%d\n", __func__, pblock->GetSerializeSize(SER_DISK, CLIENT_VERSION));
 
@@ -5490,6 +5490,9 @@ int ActiveProtocol()
  
     if (IsSporkActive(SPORK_15_NEW_PROTOCOL_ENFORCEMENT_2))
             return MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT;
+		
+	if (IsSporkActive(SPORK_15_NEW_PROTOCOL_ENFORCEMENT_3))
+            return MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT3;
 
     return MIN_PEER_PROTO_VERSION_BEFORE_ENFORCEMENT;
 }
