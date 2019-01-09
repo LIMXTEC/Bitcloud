@@ -1,5 +1,5 @@
 // Copyright (c) 2014-2015 The Dash developers
-// Copyright (c) 2015-2017 The PIVX developers 
+// Copyright (c) 2015-2017 The PIVX developers
 // Copyright (c) 2015-2017 The BTDX developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
@@ -301,7 +301,7 @@ void CMasternodePayments::FillBlockPayee(CMutableTransaction& txNew, int64_t nFe
 
     CAmount blockValue = GetBlockValue(pindexPrev->nHeight +1 );
     CAmount masternodePayment = GetMasternodePayment(pindexPrev->nHeight +1, blockValue);
-	        
+
 
     if (hasPayment) {
         if (fProofOfStake) {
@@ -333,10 +333,18 @@ void CMasternodePayments::FillBlockPayee(CMutableTransaction& txNew, int64_t nFe
 
         LogPrintf("Masternode payment of %s to %s\n", FormatMoney(masternodePayment).c_str(), address2.ToString().c_str());
     }
+    else
+        {
+        if( pindexPrev->nHeight + 1 <= Params().LAST_POW_BLOCK())
+            {
+             txNew.vout[0].nValue = nFees + blockValue;
+             LogPrintf("POW Modus:CreateNewBlock: blockvalue to pay value %u\n", blockValue);
+            }
+        }
 }
 
 int CMasternodePayments::GetMinMasternodePaymentsProto()
-{    
+{
     if (IsSporkActive(SPORK_10_MASTERNODE_PAY_UPDATED_NODES))
         return ActiveProtocol();                          // Allow only updated peers
     else
