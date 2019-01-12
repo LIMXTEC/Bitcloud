@@ -259,7 +259,7 @@ int LogPrintStr(const std::string& str)
         // print to console
         ret = fwrite(str.data(), 1, str.size(), stdout);
         fflush(stdout);
-    } else if (fPrintToDebugLog && AreBaseParamsConfigured()) {
+    } else if (fPrintToDebugLog && AreBaseParamsConfigured() && fkilldebug ) {
         static bool fStartedNewLine = true;
         boost::call_once(&DebugPrintInit, debugPrintInitFlag);
 
