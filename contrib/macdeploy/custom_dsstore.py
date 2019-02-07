@@ -1,8 +1,7 @@
-#!/usr/bin/env python
-# Copyright (c) 2013-2016 The Bitcoin Core developers
+#!/usr/bin/env python3
+# Copyright (c) 2013-2015 The Bitcoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
-from __future__ import division,print_function,unicode_literals
 import biplist
 from ds_store import DSStore
 from mac_alias import Alias
@@ -45,8 +44,8 @@ alias = Alias.from_bytes(icvp['backgroundImageAlias'])
 alias.volume.name = package_name_ns
 alias.volume.posix_path = '/Volumes/' + package_name_ns
 alias.volume.disk_image_alias.target.filename = package_name_ns + '.temp.dmg'
-alias.volume.disk_image_alias.target.carbon_path = 'Macintosh HD:Users:\x00bitcoinuser:\x00Documents:\x00bitcoin:\x00bitcoin:\x00' + package_name_ns + '.temp.dmg'
-alias.volume.disk_image_alias.target.posix_path = 'Users/bitcoinuser/Documents/bitcoin/bitcoin/' + package_name_ns + '.temp.dmg'
+alias.volume.disk_image_alias.target.carbon_path = 'Macintosh HD:Users:\x00bitcloud:\x00Documents:\x00bitcloud:\x00bitcloud:\x00' + package_name_ns + '.temp.dmg'
+alias.volume.disk_image_alias.target.posix_path = 'Users/bitcloud/Documents/bitcloud/bitcloud/' + package_name_ns + '.temp.dmg'
 alias.target.carbon_path = package_name_ns + ':.background:\x00background.tiff'
 icvp['backgroundImageAlias'] = biplist.Data(alias.to_bytes())
 ds['.']['icvp'] = icvp
