@@ -149,7 +149,7 @@ printf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str());
 printf("genesis.hashMerkleRoot = %s \n", genesis.hashMerkleRoot.ToString().c_str());
 */
 
-        /**
+        /*
          * Build the genesis block. Note that the output of the genesis coinbase cannot
          * be spent as it did not originally exist in the database.
          *
@@ -240,7 +240,7 @@ genesis hash: 000002d56463941c20eae5cb474cc805b646515d18bc7dc222a0885b206eadb0
 };
 static CMainParams mainParams;
 
-/**
+/*
  * Testnet (v3)
  */
 class CTestNetParams : public CMainParams
@@ -306,8 +306,8 @@ public:
 
 
         nPoolMaxTransactions = 2;
-        strSporkKey = "04348C2F50F90267E64FACC65BFDC9D0EB147D090872FB97ABAE92E9A36E6CA60983E28E741F8E7277B11A7479B626AC115BA31463AC48178A5075C5A9319D4A38";
-        strDarksendPoolDummyAddress = "y57cqfGRkekRyDRNeJiLtYVEbvhXrNbmox";
+        strSporkKey = "04982ABC443EB2F4A9EB73B9ED73456CAAB10071A2DED9761BCFDE1997B55BA810C3A95415D203296ADAE60F8DF348941C0DA1FCD70137C0069207CEE213C33E23";
+        strDarksendPoolDummyAddress = "y9GT3SSVAditTmC2ZkykzeDpg9zmCYMwEw";
         nStartMasternodePayments = 1420837558; //Fri, 09 Jan 2015 21:05:58 GMT
     }
     const Checkpoints::CCheckpointData& Checkpoints() const
